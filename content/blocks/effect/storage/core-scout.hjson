@@ -1,0 +1,33 @@
+type: CoreBlock
+name: Core: Scout
+description: Core of the base. Unarmored.
+details: "The zeroth iteration. Tiny, lightweight. Equipped with one-use thrusters, not designed for constructing bases."
+size: 2
+health: 250
+
+unitType: nova
+itemCapacity: 1000
+unitCapModifier: 4
+isFirstTier: true
+
+category: effect
+
+research: {
+  parent: core-shard
+  objectives: [
+    {
+      type: Research
+      // Using 'content' instead of 'preset' to fix the RuntimeException
+      content: nova
+    }
+  ]
+  requirements: [
+    copper/4000
+    lead/2000
+  ]
+}
+
+requirements: [
+  copper/500
+  lead/400
+]

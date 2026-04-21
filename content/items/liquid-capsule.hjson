@@ -1,0 +1,8 @@
+name: Liquid Capsule
+description: Used in storage of liquids.
+color: bfc2dd
+
+research: {
+  parent: metaglass
+  planet: serpulo
+} 

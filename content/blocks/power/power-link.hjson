@@ -1,0 +1,22 @@
+type: PowerNode
+name: Power Link
+description: Transmits power over vast distances. Can only connect to two targets.
+size: 3
+health: 1000
+# Range is 500 tiles
+laserRange: 500
+maxNodes: 2
+
+# This prevents the node from grabbing every nearby power source automatically
+autolink: false
+
+requirements: [
+  lead/250
+  titanium/115
+  silicon/220
+  surge-alloy/540
+  phase-fabric/240
+]
+
+category: power
+research: surge-tower

@@ -1,0 +1,60 @@
+type: GenericCrafter
+name: Spore Crusher
+description: "Compresses spore pods into oil. Requires cryofluid as coolant."
+size: 3
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 20
+liquidCapacity: 90
+
+# 1.0s cycle
+craftTime: 60
+
+consumes: {
+  power: 3.75
+  items: [
+    spore-pod/3
+  ]
+  liquid: {
+    liquid: cryofluid
+    amount: 0.1
+  }
+}
+
+outputLiquid: oil/0.45
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    {
+      type: DrawPistons
+      sinMag: 1
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: oil
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
+
+requirements: [
+  lead/90
+  silicon/85
+  thorium/60
+  plastanium/25
+]
+
+category: crafting
+research: coal-centrifuge

@@ -1,0 +1,27 @@
+type: LogicBlock
+name: Neoplastic Processor
+description: Runs a sequence of logic instructions in a loop. Can be used to control units and buildings. Faster than the hyper processor.
+# vanilla styled description consistent with vanilla
+size: 4
+instructionsPerTick: 80
+maxInstructionsPerTick: 140
+
+range: 400
+
+consumes: {
+  liquids: [
+    neoplasm/0.13333333333
+  ]
+}
+
+requirements: [
+  lead/540
+  neoplastic-alloy/240
+  thorium/160
+  silicon/180
+  surge-alloy/190
+  plastanium/55
+]
+
+category: logic
+research: hyper-processor

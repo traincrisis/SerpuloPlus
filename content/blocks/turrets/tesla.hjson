@@ -1,0 +1,81 @@
+type: PowerTurret
+name: Tesla
+description: "Fires a trio of high-caliber piercing lasers that temporarily disarm enemy weaponry."
+size: 3
+health: 1650
+# Original range (30 tiles)
+range: 240
+
+# NERFED: Reload +30 ticks (80 + 30 = 110) to apply Xcord's nerf without desyncing SFX
+reload: 110
+
+shootCone: 25
+rotateSpeed: 4
+targetAir: true
+targetGround: true
+recoil: 5
+shake: 3
+
+shoot: {
+    # SYNCED: 40 ticks matches the chargeLancer sound perfectly
+    firstShotDelay: 40
+    
+    # Triple beam spread for the cool factor
+    type: ShootSpread
+    shots: 3
+    spread: 4
+}
+
+moveWhileCharging: false
+accurateDelay: false
+
+shootSound: shootLancer
+chargeSound: chargeLancer
+
+shootType: {
+    type: LaserBulletType
+    damage: 210
+    length: 248
+    width: 14
+    pierceCap: 4
+    
+    # Status effect from the balance list
+    status: disarmed
+    statusDuration: 180 
+    
+    buildingDamageMultiplier: 0.2
+    
+    # UPDATED: Neoplastic Alloy Palette (9e1e1e)
+    # [Dark Red, Mid Red, White Core]
+    colors: [9e1e1e, c82d2d, ffffff]
+    
+    hitEffect: hitLancer
+    drawSize: 400
+    lifetime: 16
+}
+
+consumes: {
+    power: 6.5
+    coolant: {
+        amount: 0.5
+    }
+}
+
+requirements: [
+    copper/550
+    lead/540
+    titanium/400
+    silicon/300
+    neoplastic-alloy/420
+]
+
+category: turret
+research: {
+    parent: shock-mine
+    requirements: [
+        graphite/5400
+        titanium/4000
+        silicon/3000
+        neoplastic-alloy/4200
+    ]
+}

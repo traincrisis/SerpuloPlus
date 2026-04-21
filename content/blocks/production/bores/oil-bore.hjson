@@ -1,0 +1,61 @@
+type: Fracker
+name: Oil Bore
+description: "Uses large amounts of power, scrap and water to drill for oil."
+size: 4
+liquidCapacity: 90
+
+# Exact output: 45.5 / 60 = 0.75833333333
+pumpAmount: 0.43333333333
+result: oil
+attribute: oil
+baseEfficiency: 0
+itemUseTime: 60
+
+# Sound settings
+ambientSound: loopDrill
+ambientSoundVolume: 0.08
+
+updateEffect: pulverize
+updateEffectChance: 0.05
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: "-rotator"
+      spinSprite: true
+      # Doubled from vanilla 1.4 to 2.8
+      rotateSpeed: 2.8
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
+
+consumes: {
+  power: 3.83333333
+  items: [
+    scrap/1
+  ]
+  liquids: [
+    water/0.2
+  ]
+}
+
+requirements: [
+  copper/330
+  lead/230
+  graphite/240
+  thorium/340
+  silicon/155
+  phase-fabric/75
+]
+
+category: production
+research: oil-bore

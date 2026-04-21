@@ -1,0 +1,28 @@
+name: Infested
+color: e05438
+outline: true
+
+// Stat Multipliers (0.9 = 10% debuff)
+speedMultiplier: 0.9
+healthMultiplier: 0.9
+damageMultiplier: 0.9
+reloadMultiplier: 0.9
+buildSpeedMultiplier: 0.9
+
+// Transition Logic
+reactive: false
+affinities: [ wet ]
+transitionDamage: 18 
+// Deals 18 damage when a Wet unit becomes Infested or vice-versa
+
+// Visuals
+effect: {
+  type: ParticleEffect
+  particles: 5
+  length: 6
+  lifetime: 35
+  colorFrom: e05438
+  colorTo: 8a2e1c
+  sizeFrom: 1.5
+  sizeTo: 0.5
+}

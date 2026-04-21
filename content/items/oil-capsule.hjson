@@ -1,0 +1,10 @@
+name: Oil Capsule
+description: Used in storage of oil.
+color: 313131
+explosiveness: 1.2
+flammability: 1.2
+
+research: {
+  parent: liquid-capsule
+  planet: serpulo
+} 

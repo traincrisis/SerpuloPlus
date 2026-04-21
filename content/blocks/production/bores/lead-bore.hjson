@@ -1,0 +1,48 @@
+type: GenericCrafter
+name: Lead Bore
+description: "Extracts lead. Used in locations where lead ore is too far away or unavailable. Requires water as coolant."
+size: 3
+hasItems: true
+hasPower: true
+
+craftTime: 55
+craftEffect: smeltsmoke
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: "-rotator"
+      rotateSpeed: 2.8
+      spinSprite: true
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
+
+consumes: {
+  power: 6.0
+  liquids: [
+    water/0.10833333333
+  ]
+}
+
+outputItem: lead/2
+
+requirements: [
+  copper/360
+  lead/460
+  graphite/360
+  phase-fabric/290
+  plastanium/300
+]
+
+category: production
+research: copper-bore

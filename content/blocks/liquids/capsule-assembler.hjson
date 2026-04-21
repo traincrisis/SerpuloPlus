@@ -1,0 +1,28 @@
+type: GenericCrafter
+name: Capsule Assembler
+description: Produces liquid capsules from metaglass.
+size: 2
+hasPower: true
+hasItems: true
+itemCapacity: 10
+
+consumes: {
+  power: 0.75
+  items: [
+    metaglass/10
+  ]
+}
+
+craftTime: 30
+outputItem: liquid-capsule/1
+
+requirements: [
+  lead/265
+  metaglass/180
+  graphite/435
+  titanium/155
+  silicon/255
+]
+
+category: liquid
+research: liquid-container

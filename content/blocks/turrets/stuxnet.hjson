@@ -1,0 +1,132 @@
+type: LaserTurret
+name: Stuxnet
+description: "Fires a colossal catastrophic beam at enemy targets over long distances."
+size: 5
+
+# BALANCED: 60 tiles (480 units)
+range: 480 
+shake: 10
+rotateSpeed: 0.8
+
+soundPitchMin: 1
+soundPitchMax: 1
+firingMoveFract: 0
+
+chargeSound: acceleratorCharge
+shootSound: shootMeltdown
+loopSound: beamMeltdown
+loopSoundVolume: 2
+
+shoot: {
+  firstShotDelay: 200 
+}
+
+# EXACT MELTDOWN TIMING
+shootDuration: 230 
+recoil: 8
+reload: 600
+
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: ShapePart
+      progress: warmup
+      # UPDATED: Vibrant Ultimatter Light (d6a2e8)
+      color: d6a2e8
+      circle: true
+      hollow: true
+      stroke: 0
+      strokeTo: 2.5
+      radius: 14
+      layer: 110
+      y: -16
+    }
+    {
+      type: ShapePart
+      progress: warmup
+      rotateSpeed: 3.5
+      # UPDATED: Vibrant Ultimatter Light (d6a2e8)
+      color: d6a2e8
+      sides: 4
+      hollow: true
+      stroke: 0
+      strokeTo: 2
+      radius: 10
+      layer: 110
+      y: -16
+    }
+    {
+      type: ShapePart
+      progress: warmup
+      color: ffffff
+      circle: true
+      radius: 0
+      radiusTo: 5
+      layer: 110
+      y: -16
+    }
+    {
+      type: HaloPart
+      progress: warmup
+      # UPDATED: Vibrant Ultimatter Light (d6a2e8)
+      color: d6a2e8
+      tri: true
+      shapes: 3
+      triLength: 0
+      triLengthTo: 8
+      radius: 6
+      haloRadius: 14
+      haloRotateSpeed: 1.5
+      layer: 110
+      y: -16
+    }
+  ]
+}
+
+shootType: {
+  type: ContinuousLaserBulletType
+  damage: 166.67 
+  length: 480
+  width: 20 
+  lifetime: 16
+  timescaleDamage: true
+  drawSize: 550 
+  
+  # UPDATED: New Vibrant Palette (d6a2e8)
+  # [Ultimatter Light Base, Bright Glow, Pure Core]
+  colors: [d6a2e8, ebc7f5, ffffff]
+  
+  incendAmount: 5
+  incendSpread: 30
+  largeHit: true
+}
+
+consumes: {
+  power: 100.0
+}
+
+requirements: [
+  silicon/3000
+  plastanium/2500
+  phase-fabric/2000
+  surge-alloy/1500
+  ultimatter-alloy/1200
+]
+
+category: turret
+
+research: {
+  parent: foreshadow
+  objectives: [
+    rowhammer
+    vitreous
+  ]
+  requirements: [
+    copper/30000
+    lead/25000
+    silicon/20000
+    thorium/15000
+    ultimatter-alloy/12000
+  ]
+}

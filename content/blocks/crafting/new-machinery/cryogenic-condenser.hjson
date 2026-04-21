@@ -1,0 +1,67 @@
+type: Separator
+name: Cryogenic Condenser
+description: "Mixes together neoplastic alloy, dipping into cryofluid, glueing it with graphite into cryogenic alloy. Requires phase as stabilizer and lubricant to operate."
+size: 5
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 80
+liquidCapacity: 180
+
+# 1.75 seconds = 105 ticks
+craftTime: 15
+
+consumes: {
+  power: 7.66666666667
+  items: [
+    neoplastic-alloy/2
+    graphite/4
+    phase-fabric/1
+  ]
+  liquids: [
+    cryofluid/0.5
+    lubricant/0.2
+  ]
+}
+
+# 95% and 5% split
+results: [
+  cryogenic-alloy/75
+  ultimatter-alloy/25
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawWarmupRegion
+    }
+    # Re-added the flame layer
+    {
+      type: DrawFlame
+      flameColor: 99c9ff
+      flameRadius: 7.5
+      flameRadiusMag: 2.5
+    }
+  ]
+}
+
+ambientSound: loopSmelter
+
+requirements: [
+  metaglass/380
+  plastanium/430
+  thorium/340
+  neoplastic-alloy/460
+  cryogenic-alloy/260
+  ultimatter-alloy/160
+  phase-fabric/225
+  surge-alloy/950
+  silicon/835
+]
+
+category: crafting
+research: neoplastic-refinery

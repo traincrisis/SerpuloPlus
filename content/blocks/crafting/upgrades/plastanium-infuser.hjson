@@ -1,0 +1,53 @@
+type: GenericCrafter
+name: Plastanium Infuser
+description: Produces plastanium from oil and titanium. Requires water as coolant.
+size: 3
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 20
+liquidCapacity: 80
+
+craftTime: 150
+
+// Visuals matched to your vanilla source snippet
+craftEffect: formsmoke
+updateEffect: plasticburn
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawFade
+      suffix: -top
+    }
+  ]
+}
+
+consumes: {
+  power: 4.0
+  items: [
+    titanium/10
+  ]
+  // Use 'liquids' array to support multiple types
+  liquids: [
+    oil/0.5
+    water/0.2
+  ]
+}
+
+outputItem: plastanium/10
+
+requirements: [
+  lead/200
+  graphite/90
+  titanium/100
+  silicon/90
+  plastanium/100
+]
+
+category: crafting
+research: phase-weaver

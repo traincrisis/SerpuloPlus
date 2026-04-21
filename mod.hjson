@@ -1,0 +1,142 @@
+name: "serpuloplus"
+displayName: "[[]#a179fa]Serpulo[[]white]+"
+author: "[[]#984cd7]ThePul[[]#833edd]lerCell"
+subtitle: "Upgraded Tiers with extra steps"
+description: "An expansion of Serpulo, featuring a variety of new things:\n\n- New tiers for a variety of blocks, from [[]#9a9fb4]Scrap[[]white] to [[]#4a90ad]Cryogenic[[]white], existing for item distribution blocks, as Pneumatic Drill upgrades, and to the Power Node and Solar Panel with the large variant.\n\n- Upgrades for factory blocks from vanilla, including the Oven as an upgrade to the Kiln, Plastanium Infuser as an upgrade to the Plastanium Compressor, Phase Loom as an upgrade to the Phase Weaver, etc.\n\n- Expanded scrap processing lines: Specific Separators which separate slag down into specific items, and the Scrap Compactor which turns Graphite, Titanium and Thorium into Scrap.\n\n- And more! More stuff existing includes the Core: Apex with the Delta core unit, Spore Invader and Collector, and the Cell Incubator and Reactor.\n\nCredits:\n\n- [[]#ff]T[[]#b]w[[]#5]e[[]#2]u[[]white] (tinnphat_ on Discord), for spriting most old sprites in the mod, aswell as continuing Renn's work. \n\n- red.id9990 on Discord, for spriting most new sprites in the mod. \n\n- [[]#8cff00]Telesteel[[]white] (giga_chad96 on Discord) for Tesla turret sprite."
+version: "PR0.2"
+minGameVersion: "155"
+dependencies: [ ]
+hidden: false
+contentOrder: [
+    neoplastic-alloy
+    cryogenic-alloy
+    ultimatter-alloy
+    liquid-capsule
+    water-capsule
+    slag-capsule
+    oil-capsule
+    cryofluid-capsule
+    neoplasm-capsule
+    lubricant-capsule
+    lubricant
+    tesla
+    vitreous
+    randren
+    rowhammer
+    stuxnet
+    water-bore
+    water-rig
+    incubator
+    biochamber
+    oil-bore
+    oil-rig
+    copper-extractor
+    lead-extractor
+    titanium-extractor
+    thorium-extractor
+    copper-bore
+    lead-bore
+    titanium-bore
+    thorium-bore
+    copper-rig
+    lead-rig
+    titanium-rig
+    thorium-rig
+    capsule-assembler
+    water-encapsulator
+    water-decapsulator
+    slag-encapsulator
+    slag-decapsulator
+    oil-encapsulator
+    oil-decapsulator
+    cryofluid-encapsulator
+    cryofluid-decapsulator
+    neoplasm-encapsulator
+    neoplasm-decapsulator
+    lubricant-encapsulator
+    lubricant-decapsulator
+    power-link
+    cell-reactor
+    scrap-melder
+    copper-separator
+    lead-separator
+    graphite-separator
+    titanium-separator
+    heavy-incinerator
+    cell-incubator
+    cell-grower
+    cell-plant
+    neoplastic-smelter
+    neoplastic-crucible
+    neoplastic-refinery
+    cryogenic-freezer
+    cryogenic-chiller
+    cryogenic-condenser
+    ultimatter-accelerator # needs implementation
+    ultimatter-collider # needs implementation
+    ultimatter-singularity # needs implementation
+    lubricant-mixer
+    lubricant-centrifuge # needs implementation
+    lubricant-compounder # needs implementation
+    graphite-compactor
+    silicon-refinery
+    oven
+    furnace
+    plastanium-infuser
+    plastanium-synthesizer
+    phase-loom
+    phase-fabricator
+    kinetic-crucible
+    surge-refinery
+    cryofluid-centrifuge
+    cryofluid-compounder
+    pyratite-centrifuge
+    pyratite-compounder
+    blast-centrifuge
+    blast-compounder
+    burner
+    vaporizer
+    spore-crusher
+    spore-compactor
+    grinder
+    crusher
+    dismantler
+    coal-solidifier
+    coal-compressor
+    blast-direct-mixer
+    blast-direct-centrifuge
+    blast-direct-compounder
+    pentative-reconstructor # needs implementation
+    hexative-reconstructor # needs implementation
+    core-scout
+    core-apex
+    core-monument
+    safe
+    center
+    bank
+    mend-dome
+    overdriver
+    spore-invader
+    spore-collector
+    neoplastic-processor
+    cryogenic-processor # needs implementation
+    ultimatter-processor # needs implementation
+    monarch # needs implementation, t6 dagger
+    emperor # needs implementation, t7 dagger
+    aurora # needs implementation, t6 nova
+    magnetar # needs implementation, t7 nova
+    chelicerae # needs implementation, t6 crawler
+    arachne # needs implementation, t7 crawler
+    solstice # needs implementation, t6 flare
+    equinox # needs implementation, t7 flare
+    ennea # needs implementation, t6 mono
+    deca # needs implementation, t7 mono
+    cetus # needs implementation, t6 risso
+    leviathan # needs implementation, t7 risso
+    glaucus # needs implementation, t6 retusa
+    triton # needs implementation, t7 retusa
+    delta
+    forsaken-spirit
+    forgotten-spirit # needs implementation
+    zeus # needs implementation
+]

@@ -1,0 +1,57 @@
+type: GenericCrafter
+name: Lead Separator
+description: Separates slag into its mineral components, tuned for lead.
+size: 2
+health: 160
+itemCapacity: 10
+liquidCapacity: 40
+hasPower: true
+hasItems: true
+hasLiquids: true
+craftTime: 30
+
+consumes: {
+  power: 1.0
+  items: [ scrap/1 ]
+  liquid: slag/0.06666667
+}
+
+outputItem: lead/1
+ambientSound: none
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      # This looks for [blockname]-bottom
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: slag
+      padding: 2
+    }
+    {
+      # This looks for [blockname]-spinner
+      type: DrawRegion
+      suffix: "-spinner"
+      spinSprite: true
+      rotateSpeed: 3
+    }
+    {
+      # This draws the main [blockname].png sprite on top
+      type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  copper/100
+  lead/10
+  titanium/100
+  plastanium/55
+]
+
+category: crafting
+research: copper-separator 

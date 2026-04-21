@@ -1,0 +1,79 @@
+type: GenericCrafter
+name: Cell Grower
+description: "Incubates neoplastic cells from phase and injects into water to produce neoplasm. Requires thorium as additional injection."
+size: 3
+liquidCapacity: 120
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 20
+
+craftTime: 60
+updateEffect: none
+craftEffect: none
+ambientSound: loopMachineSpin
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    # Water rendered first through the middle mask
+    {
+      type: DrawLiquidRegion
+      drawLiquid: water
+      suffix: "-middle"
+    }
+    # Neoplasm rendered over water through the same mask
+    {
+      type: DrawLiquidRegion
+      drawLiquid: neoplasm
+      suffix: "-middle"
+    }
+    {
+      type: DrawWarmupRegion
+      sinMag: 0.2
+      color: ffffff66
+    }
+    {
+      type: DrawRegion
+      suffix: "-spin"
+      spinSprite: true
+      rotateSpeed: 15
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
+
+consumes: {
+  power: 7.0
+  items: [
+    spore-pod/3
+    phase-fabric/2
+    thorium/1
+  ]
+  liquid: water/0.9
+}
+
+outputLiquid: neoplasm/0.9
+
+requirements: [
+  plastanium/120
+  metaglass/220
+  neoplastic-alloy/120
+  graphite/150
+  silicon/115
+  phase-fabric/115
+  thorium/145
+]
+
+category: crafting
+research: cryogenic-freezer

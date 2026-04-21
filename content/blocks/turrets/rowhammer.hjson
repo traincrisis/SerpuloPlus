@@ -1,0 +1,99 @@
+type: ItemTurret
+name: Rowhammer
+description: "Fires rapid-fire pressurized slugs at ground and air targets with devastating force."
+size: 4
+range: 160
+reload: 3.75
+shootCone: 15
+rotateSpeed: 3
+targetAir: true
+targetGround: true
+recoil: 3
+inaccuracy: 2
+shootSound: shootCyclone
+shake: 0.5
+
+# Duo-style alternating shot logic
+shoot: {
+  type: ShootAlternate
+  spread: 11
+}
+
+# Define two recoils so each barrel has its own index
+recoils: 2
+
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-barrel-l"
+      progress: recoil
+      recoilIndex: 0
+      under: true
+      moveY: -1.5
+    }
+    {
+      type: RegionPart
+      suffix: "-barrel-r"
+      progress: recoil
+      recoilIndex: 1
+      under: true
+      moveY: -1.5
+    }
+  ]
+}
+
+ammoTypes: {
+  surge-alloy: {
+    type: BasicBulletType
+    speed: 8
+    lifetime: 20
+    damage: 160
+    width: 8
+    height: 12
+    frontColor: ffffff
+    backColor: f3e979
+    trailColor: f3e979
+    trailWidth: 2
+    trailLength: 8
+    status: shocked
+    statusDuration: 60
+    hitEffect: hitLancer
+  }
+  silicon: {
+    type: BasicBulletType
+    speed: 8
+    lifetime: 20
+    damage: 135
+    width: 10
+    height: 14
+    frontColor: ffffff
+    backColor: b0bac0
+    trailColor: d1efff
+    trailWidth: 3
+    trailLength: 10
+    status: slow
+    statusDuration: 120
+    homingPower: 0.1
+    homingRange: 80
+  }
+}
+
+consumes: {
+  coolant: {
+    amount: 0.5
+  }
+}
+
+coolantMultiplier: 3
+
+requirements: [
+  plastanium/750
+  lead/100
+  silicon/800
+  surge-alloy/50
+]
+
+category: turret
+research: spectre

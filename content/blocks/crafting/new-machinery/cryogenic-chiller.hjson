@@ -1,0 +1,65 @@
+type: Separator
+name: Cryogenic Chiller
+description: "Mixes together neoplastic alloy, dipping into cryofluid, glueing it with graphite into cryogenic alloy. Requires water as additional coolant."
+size: 4
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 40
+liquidCapacity: 130
+
+# 1.75 seconds = 105 ticks
+craftTime: 30
+
+consumes: {
+  power: 5.33333333333
+  items: [
+    neoplastic-alloy/1
+    graphite/2
+  ]
+  liquids: [
+    cryofluid/0.17
+    water/0.4
+  ]
+}
+
+# 95% and 5% split
+results: [
+  cryogenic-alloy/90
+  ultimatter-alloy/10
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawWarmupRegion
+    }
+    # Re-added the flame layer
+    {
+      type: DrawFlame
+      flameColor: 99c9ff
+      flameRadius: 5.5
+      flameRadiusMag: 2.5
+    }
+  ]
+}
+
+ambientSound: loopSmelter
+
+requirements: [
+  metaglass/340
+  plastanium/350
+  thorium/190
+  neoplastic-alloy/240
+  cryogenic-alloy/180
+  phase-fabric/720
+  surge-alloy/940
+  silicon/830
+]
+
+category: crafting
+research: neoplastic-crucible

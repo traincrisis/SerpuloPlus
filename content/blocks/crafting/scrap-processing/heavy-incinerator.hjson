@@ -1,0 +1,77 @@
+type: GenericCrafter
+name: Heavy Incinerator
+description: Melds every material from Serpulo into mere scrap.
+details: "A failure of an engineer. Someone really thought scrap is that valuable..."
+size: 4
+health: 1500
+itemCapacity: 200
+hasPower: true
+hasItems: true
+
+// 600 seconds * 60 frames = 36,000 frames
+craftTime: 36000
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      # This forces it to stick to the main sprite and not look for an '-active' one
+      type: DrawRegion
+    }
+    {
+      type: DrawFlame
+      flameColor: ffc099
+      flameRadius: 4
+      flameRadiusIn: 2
+    }
+  ]
+}
+
+consumes: {
+  // 1000 power units / 60 frames = 16.6666666667 per frame
+  power: 16.6666666667
+  items: [
+    copper/100
+    lead/100
+    metaglass/100
+    graphite/100
+    sand/100
+    coal/100
+    titanium/100
+    thorium/100
+    silicon/100
+    plastanium/100
+    phase-fabric/100
+    surge-alloy/100
+    spore-pod/100
+    blast-compound/100
+    pyratite/100
+  ]
+}
+
+outputItem: scrap/10
+
+requirements: [
+  copper/1000
+  lead/1000
+  titanium/1000
+  thorium/1000
+]
+
+category: crafting
+
+research: {
+  parent: scrap-melder
+  objectives: [
+    {
+      type: SectorComplete
+      preset: planetaryTerminal
+    }
+  ]
+  requirements: [
+    copper/50000
+    lead/50000
+    titanium/50000
+    thorium/50000
+  ]
+}

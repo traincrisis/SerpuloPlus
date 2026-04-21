@@ -1,0 +1,52 @@
+type: GenericCrafter
+name: Burner
+description: Melts down scrap into slag. Requires pyratite as an additional heat source.
+size: 2
+itemCapacity: 20
+liquidCapacity: 100
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+// 0.2 seconds = 5 crafts per second
+craftTime: 30 
+
+consumes: {
+  power: 1.6666667
+  items: [
+    scrap/6
+    pyratite/1
+  ]
+}
+
+outputLiquid: {
+  liquid: slag
+  amount: 0.66666666666
+}
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: slag
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  copper/90
+  lead/95
+  graphite/105
+  titanium/90
+]
+
+category: crafting
+research: disassembler

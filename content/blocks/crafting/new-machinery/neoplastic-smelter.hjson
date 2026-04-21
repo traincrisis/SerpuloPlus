@@ -1,0 +1,77 @@
+type: GenericCrafter
+name: Neoplastic Smelter
+description: Fuses surge alloy and phase fabric glueing it with graphite and dipping into neoplasm to neoplastic alloy. 
+size: 3
+category: crafting
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 20
+
+consumes: {
+  power: 2.16666665
+  items: [
+    surge-alloy/1
+    graphite/2
+    phase-fabric/1
+  ]
+  liquid: neoplasm/0.10833333
+}
+
+craftTime: 45
+outputItem: neoplastic-alloy/1
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    # 1. Base layer (Always visible)
+    {
+      type: DrawDefault
+    }
+    # 2. Top Sprite - ONLY visible when active
+    {
+      type: DrawWarmupRegion
+    }
+    # 3. The "Surge Circle" - Rendered on the very top
+    {
+      type: DrawFlame
+      # Inner color (Alloy glow)
+      flameColor: ffc999
+      # Border color you requested
+    }
+  ]
+}
+
+# The classic Serpulo smoke effect
+craftEffect: smeltsmoke
+ambientSound: loopSmelter
+
+requirements: [
+  metaglass/40
+  plastanium/60
+  surge-alloy/80
+  phase-fabric/70
+  silicon/80
+]
+
+research: {
+  parent: cell-incubator
+  planet: serpulo
+  requirements: [
+    metaglass/2250
+    plastanium/3500
+    surge-alloy/8500
+    phase-fabric/7200
+    silicon/8000
+  ]
+  objectives: [
+    {
+      type: SectorComplete
+      preset: weatheredChannels
+    }
+    {
+      type: SectorComplete
+      preset: desolateRift
+    }
+  ]
+}

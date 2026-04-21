@@ -1,0 +1,54 @@
+type: GenericCrafter
+name: Phase Fabricator
+description: Synthesizes phase fabric from thorium and sand, using silicon as an additional reinforcement, and lubricant to operate.
+size: 4
+hasPower: true
+hasItems: true
+itemCapacity: 80
+
+craftTime: 90
+// 2.5 seconds * 60 frames = 150
+
+craftEffect: smeltsmoke
+ambientSound: loopTech
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    {
+      type: DrawWeave
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+consumes: {
+  power: 7
+  items: [
+    thorium/24
+    sand/45
+    silicon/12
+  ]
+  liquids: [
+    lubricant/0.4
+  ]
+}
+
+outputItem: phase-fabric/12
+
+requirements: [
+  lead/600
+  thorium/400
+  silicon/400
+  phase-fabric/250
+  plastanium/160
+]
+
+category: crafting
+research: plastanium-synthesizer

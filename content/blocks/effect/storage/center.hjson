@@ -1,0 +1,13 @@
+type: StorageBlock
+name: Center
+description: Stores a significant amount of items of each type. Expands storage when placed next to a core. Contents can be retrieved with an unloader.
+size: 5
+itemCapacity: 8000
+requirements: [
+  titanium/2500
+  thorium/2000
+  plastanium/1500
+  phase-fabric/1000
+]
+category: effect
+research: safe

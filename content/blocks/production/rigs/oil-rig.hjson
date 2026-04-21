@@ -1,0 +1,60 @@
+type: Fracker
+name: Oil Rig
+description: "Uses large amounts of power, lead and graphite to drill for oil."
+size: 5
+liquidCapacity: 120
+
+# Exact output: 45.5 / 60 = 0.75833333333
+pumpAmount: 0.75833333333
+result: oil
+attribute: oil
+baseEfficiency: 0
+itemUseTime: 120
+
+# Sound settings
+ambientSound: loopDrill
+ambientSoundVolume: 0.08
+
+updateEffect: pulverize
+updateEffectChance: 0.05
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: "-rotator"
+      spinSprite: true
+      # Doubled from vanilla 1.4 to 2.8
+      rotateSpeed: 2.8
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
+
+consumes: {
+  power: 5.83333333333
+  items: [
+    graphite/2
+    lead/2
+  ]
+}
+
+requirements: [
+  copper/530
+  lead/330
+  graphite/440
+  thorium/640
+  silicon/205
+  phase-fabric/120
+  surge-alloy/35
+]
+
+category: production
+research: oil-bore

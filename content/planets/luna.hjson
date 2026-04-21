@@ -1,0 +1,32 @@
+name: Luna
+parent: serpulo
+accessible: false
+visible: true
+
+// Distance: 4.5 keeps it very close to Serpulo's surface
+orbitRadius: 4.5
+orbitTime: 120
+rotateTime: 1200
+radius: 0.3
+
+// Visuals: Forcing greyscale to stop the "Blue Moon" glitch
+mesh: {
+  type: NoiseMesh
+  seed: 1337
+  divisions: 5
+  color1: d1d1d1
+  color2: 666666
+  radius: 0.3
+  octaves: 5
+  persistence: 0.8
+  scale: 0.75
+  mag: 1.2
+}
+
+// Atmosphere: Explicitly set to 0 to prevent the blue tint
+hasAtmosphere: false
+bloom: false
+drawOrbit: true
+
+// This forces the "cloud" color to be invisible/none
+cloudMesh: []

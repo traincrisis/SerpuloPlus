@@ -1,0 +1,54 @@
+type: GenericCrafter
+name: Blast Direct Mixer
+description: "Produces blast compound from an internal process of combination of spores and pyratite."
+size: 4
+health: 640
+hasItems: true
+hasPower: true
+
+itemCapacity: 30
+craftTime: 159.96
+ambientSound: loopMachineSpin
+
+consumes: {
+  power: 3.43333333333
+  items: {
+    items: [
+      coal/1
+      lead/2
+      sand/2
+    ]
+  }
+}
+
+outputItem: blast-compound/2
+
+requirements: [
+  copper/105
+  lead/110
+  metaglass/30
+  graphite/30
+  silicon/10
+  titanium/20
+]
+
+category: crafting
+
+research: {
+  parent: blast-mixer
+  costs: [
+    copper/1050
+    lead/1100
+    metaglass/300
+    graphite/300
+    silicon/100
+    titanium/200
+  ]
+  # Separated by commas
+  objectives: [
+    water-extractor,
+    cultivator,
+    pyratite-mixer,
+    blast-mixer
+  ]
+} 

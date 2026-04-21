@@ -1,0 +1,39 @@
+type: GenericCrafter
+name: Pyratite Centrifuge
+description: Mixes coal, lead, and sand into pyratite. Requires slag as an additional heat source.
+size: 3
+itemCapacity: 20
+liquidCapacity: 40
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+// 1.5 seconds (90 frames / 60 FPS)
+craftTime: 60 
+ambientSound: loopMachineSpin
+
+consumes: {
+  // Set to 0.6666667 to achieve exactly 40 power units per second (40/60)
+  power: 2
+  items: [
+    coal/3
+    lead/6
+    sand/6
+  ]
+  liquid: {
+    liquid: slag
+    amount: 0.2
+  }
+}
+
+outputItem: pyratite/4
+
+requirements: [
+  copper/100
+  lead/50
+  silicon/200
+  titanium/100
+]
+
+category: crafting
+research: blast-mixer 

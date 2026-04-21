@@ -1,0 +1,54 @@
+type: SolidPump
+name: Water Bore
+description: "Extracts groundwater. Used in locations with no surface water available. Requires graphite as lubricant."
+size: 3
+liquidCapacity: 80
+
+# Exact output: 45.5 / 60 = 0.75833333333
+pumpAmount: 0.75
+result: water
+attribute: water
+envRequired: 1 # Env.groundWater
+
+# Sound settings
+ambientSound: loopMachine
+ambientSoundVolume: 0.08
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: "-rotator"
+      spinSprite: true
+      # Doubled from vanilla 1.4 to 2.8
+      rotateSpeed: 2.8
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
+
+consumes: {
+  power: 6
+  items: [
+    graphite/1
+  ]
+}
+
+requirements: [
+  copper/330
+  lead/330
+  metaglass/330
+  graphite/330
+  silicon/310
+  plastanium/300
+]
+
+category: production
+research: oil-extractor

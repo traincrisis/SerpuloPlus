@@ -1,0 +1,50 @@
+type: GenericCrafter
+name: Phase Loom
+description: Synthesizes phase fabric from thorium and sand, using silicon as an additional reinforcement.
+size: 3
+hasPower: true
+hasItems: true
+itemCapacity: 60
+
+craftTime: 120
+// 2.5 seconds * 60 frames = 150
+
+craftEffect: smeltsmoke
+ambientSound: loopTech
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    {
+      type: DrawWeave
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+consumes: {
+  power: 5.666667
+  items: [
+    thorium/10
+    sand/25
+    silicon/5
+  ]
+}
+
+outputItem: phase-fabric/4
+
+requirements: [
+  lead/200
+  thorium/100
+  silicon/200
+  phase-fabric/100
+]
+
+category: crafting
+research: plastanium-infuser

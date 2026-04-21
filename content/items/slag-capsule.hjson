@@ -1,0 +1,8 @@
+name: Slag Capsule
+description: Used in storage of slag.
+color: ffa166
+
+research: {
+  parent: liquid-capsule
+  planet: serpulo
+} 

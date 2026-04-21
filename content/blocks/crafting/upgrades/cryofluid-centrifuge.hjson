@@ -1,0 +1,61 @@
+type: GenericCrafter
+name: Cryofluid Centrifuge
+description: Mixes water and fine titanium powder to produce cryofluid, requiring graphite as lubricant.
+size: 3
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 20
+liquidCapacity: 80
+
+craftTime: 60
+
+consumes: {
+  power: 1.666667
+  items: [
+    titanium/3
+    graphite/1
+  ]
+  liquid: {
+    liquid: water
+    amount: 0.66666666666
+  }
+}
+
+outputLiquid: cryofluid/0.66666666666
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    // 1. The very base of the machine
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    // 2. The liquids (rendered on top of -bottom but under the main sprite)
+    {
+      type: DrawLiquidTile
+      drawLiquid: water
+      padding: 2
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: cryofluid
+      padding: 2
+    }
+    // 3. The main machine sprite (over the liquid)
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  lead/100
+  titanium/70
+  silicon/60
+  plastanium/10
+]
+
+category: crafting
+research: cryofluid-mixer

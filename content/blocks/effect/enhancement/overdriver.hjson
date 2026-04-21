@@ -1,0 +1,29 @@
+type: OverdriveProjector
+name: Overdriver
+description: Increases the speed of nearby buildings. Requires silicon to operate. Does not stack.
+size: 1
+
+range: 45
+speedBoost: 1.25
+
+hasBoost: false
+
+useTime: 300
+
+consumes: {
+  power: 1.33333333333
+  items: {
+    items: [
+      silicon/1
+    ]
+  }
+}
+
+requirements: [
+  lead/35
+  titanium/35
+  silicon/45
+]
+
+category: effect
+research: force-projector

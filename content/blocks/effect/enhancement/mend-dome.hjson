@@ -1,0 +1,38 @@
+type: MendProjector
+name: Mend Dome
+description: Repairs blocks in its vicinity. Requires phase fabric and silicon to operate.
+size: 3
+hasPower: true
+hasItems: true
+itemCapacity: 10
+
+// Range: 25 blocks * 8 units = 200
+range: 200
+
+// Heal settings
+// 100% / 15s = 6.66% per second. 
+// At a reload of 60 (1s), we heal 6.66% per pulse.
+healPercent: 6.666667
+reload: 60
+
+consumes: {
+  // 5.0 * 60 frames = exactly 300 power/sec
+  power: 5.0
+  items: [
+    phase-fabric/1
+    silicon/1
+  ]
+}
+
+// Visuals for a high-tier mender
+phaseColor: 84f491
+
+requirements: [
+  lead/200
+  titanium/130
+  silicon/140
+  surge-alloy/100
+]
+
+category: effect
+research: repair-turret

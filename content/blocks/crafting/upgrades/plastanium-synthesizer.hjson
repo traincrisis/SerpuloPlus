@@ -1,0 +1,55 @@
+type: GenericCrafter
+name: Plastanium Synthesizer
+description: Produces plastanium from oil and titanium. Requires water as coolant, and lubricant to operate.
+size: 4
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 40
+liquidCapacity: 120
+
+craftTime: 120
+
+// Visuals matched to your vanilla source snippet
+craftEffect: formsmoke
+updateEffect: plasticburn
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawFade
+      suffix: -top
+    }
+  ]
+}
+
+consumes: {
+  power: 7.33333333333
+  items: [
+    titanium/16
+  ]
+  // Use 'liquids' array to support multiple types
+  liquids: [
+    oil/0.8
+    water/0.6
+    lubricant/0.4
+  ]
+}
+
+outputItem: plastanium/20
+
+requirements: [
+  lead/600
+  graphite/100
+  titanium/300
+  silicon/200
+  plastanium/450
+  phase-fabric/250
+]
+
+category: crafting
+research: phase-loom

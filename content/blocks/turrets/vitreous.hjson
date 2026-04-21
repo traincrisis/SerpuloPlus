@@ -1,0 +1,50 @@
+type: ItemTurret
+name: Vitreous
+description: "Fires pressurized thermal beams that incinerate targets at medium range. Consumes slag and plastanium to maintain high-heat output."
+size: 3
+range: 152 
+reload: 30 
+shootCone: 15
+rotateSpeed: 5
+targetAir: true
+targetGround: true
+recoil: 3
+# Updated to your preferred sound
+shootSound: shootLancer
+
+ammoTypes: {
+  plastanium: {
+    type: LaserBulletType
+    damage: 132
+    length: 152
+    width: 12
+    # Your specific neon green-cyan: 7cff8e
+    colors: [7cff8e, b0ffc6, ffffff]
+    status: burning
+    statusDuration: 600
+    makeFire: true
+  }
+}
+
+consumes: {
+  power: 4.5
+  liquid: {
+    liquid: slag
+    amount: 0.3
+  }
+  coolant: {
+    amount: 0.5
+  }
+}
+
+coolantMultiplier: 3
+
+requirements: [
+  copper/350
+  graphite/200
+  thorium/100
+  plastanium/80
+]
+
+category: turret
+research: fuse

@@ -1,0 +1,24 @@
+{
+  name: Lubricant
+  description: Used as lubricant in various machines.
+  
+  // Mid-tone green from your sprite
+  color: 73d941 
+  
+  // Highlight lime-green for the glow
+  lightColor: b9f582
+  
+  // Darker green for UI bars/depth
+  barColor: 3c8f2b
+
+  // Viscosity: 0.7 (makes it look thicker/oilier than water)
+  viscosity: 0.7
+  
+  // Heat Capacity: 0.4 (stable, but not a coolant)
+  heatCapacity: 0.4
+  
+  explosiveness: 0.0
+  flammability: 0.2
+  
+  research: oil
+}

@@ -1,0 +1,11 @@
+type: Wall
+name: 3x3 Sprite Test
+size: 3
+health: 1
+category: defense
+requirements: [
+  sand/1
+]
+research: {
+  parent: core-shard
+}

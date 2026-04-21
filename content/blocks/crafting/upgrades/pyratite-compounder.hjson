@@ -1,0 +1,40 @@
+type: GenericCrafter
+name: Pyratite Compounder
+description: Mixes coal, lead, and sand into pyratite. Requires slag as an additional heat source, and lubricant to operate.
+size: 4
+itemCapacity: 40
+liquidCapacity: 80
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+// 1.5 seconds (90 frames / 60 FPS)
+craftTime: 45
+ambientSound: loopMachineSpin
+
+consumes: {
+  // Set to 0.6666667 to achieve exactly 40 power units per second (40/60)
+  power: 8.0
+  items: [
+    coal/5
+    lead/10
+    sand/10
+  ]
+  liquids: [
+    slag/0.4
+    lubricant/0.4
+  ]
+}
+
+outputItem: pyratite/8
+
+requirements: [
+  copper/250
+  lead/100
+  silicon/350
+  titanium/200
+  thorium/150
+]
+
+category: crafting
+research: blast-centrifuge

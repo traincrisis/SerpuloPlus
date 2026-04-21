@@ -1,0 +1,13 @@
+name: Neoplastic Alloy
+description: A cancerous alloy created from fusing surge alloy, phase fabric and glueing it together with graphite, and dipping in volatile neoplasm. Used in advanced defense structures and construction.
+color: 9e1e1e
+charge: 1.0
+radioactivity: 0.4
+cost: 1
+healthScaling: 0.8
+cost: 2.5
+
+research: {
+  parent: surge-alloy
+  planet: serpulo
+} 

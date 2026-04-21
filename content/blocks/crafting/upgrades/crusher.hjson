@@ -1,0 +1,60 @@
+type: GenericCrafter
+name: Crusher
+description: "Crushes scrap into fine sand. Requires cryofluid as coolant."
+size: 3
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 40
+liquidCapacity: 80
+
+# 0.5s cycle
+craftTime: 60
+
+consumes: {
+  power: 2.66666666667
+  items: [
+    scrap/4
+  ]
+  liquid: {
+    liquid: cryofluid
+    amount: 0.2
+  }
+}
+
+outputItem: sand/20
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: "-rotator"
+      spinSprite: true
+      rotateSpeed: 5
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
+
+ambientSound: loopGrind
+ambientSoundVolume: 0.05
+
+craftEffect: pulverize
+updateEffect: pulverizeSmall
+
+requirements: [
+  copper/160
+  lead/95
+  titanium/45
+  thorium/65
+]
+
+category: crafting
+research: vaporizer

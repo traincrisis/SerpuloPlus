@@ -1,0 +1,62 @@
+type: GenericCrafter
+name: Cryofluid Compounder
+description: Mixes water and fine titanium powder to produce cryofluid, requiring silicon for precision thermal sensors.
+size: 4
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 40
+liquidCapacity: 120
+
+craftTime: 60
+
+consumes: {
+  power: 7
+  items: [
+    titanium/4
+    silicon/5
+  ]
+  liquid: {
+    liquid: water
+    amount: 0.83333333333
+  }
+}
+
+outputLiquid: cryofluid/1
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    // 1. The very base of the machine
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    // 2. The liquids (rendered on top of -bottom but under the main sprite)
+    {
+      type: DrawLiquidTile
+      drawLiquid: water
+      padding: 2
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: cryofluid
+      padding: 2
+    }
+    // 3. The main machine sprite (over the liquid)
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  lead/550
+  titanium/150
+  silicon/100
+  plastanium/65
+  phase-fabric/45
+]
+
+category: crafting
+research: cryofluid-centrifuge

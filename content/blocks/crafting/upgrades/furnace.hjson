@@ -1,0 +1,69 @@
+type: GenericCrafter
+name: Furnace
+description: Smelts sand and lead into metaglass, using blast compound and slag as additional heat sources.
+size: 4
+hasItems: true
+hasPower: true
+itemCapacity: 60
+
+craftTime: 60
+// 1.4 seconds * 60 frames = 84
+
+consumes: {
+  power: 6.1
+  // 246 units / 60 frames = 4.1
+  items: [
+    lead/10
+    sand/10
+    blast-compound/1
+  ]
+  liquids: [
+    slag/0.4
+  ]
+}
+
+outputItem: metaglass/25
+
+craftEffect: smeltsmoke
+ambientSound: loopSmelter
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    # 1. Base layer (Always visible)
+    {
+      type: DrawDefault
+    }
+    # 2. Top Sprite - ONLY visible when active
+    {
+      type: DrawWarmupRegion
+      # This FORCES the engine to show original colors (No Tint)
+      color: ffffffff
+      # Keep it steady, no pulsing
+      sinMag: 0
+    }
+    # 3. The "Surge Circle" - Rendered on the very top
+    {
+      type: DrawFlame
+      # Inner color (Alloy glow)
+      flameColor: ffc099
+      # Border color you requested
+      flameRadius: 4.5
+      flameRadiusMag: 2.5
+      # This mimics the border effect by layering a second bloom
+      lightRadius: 5
+    }
+  ]
+}
+
+requirements: [
+  metaglass/260
+  titanium/140
+  lead/120
+  graphite/125
+  silicon/240
+  thorium/150
+]
+
+category: crafting
+research: silicon-refinery

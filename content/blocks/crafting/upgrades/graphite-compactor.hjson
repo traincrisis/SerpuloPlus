@@ -1,0 +1,39 @@
+type: GenericCrafter
+name: Graphite Compactor
+description: Compresses coal into graphite. Requires water as coolant and sand as stabilizer.
+size: 4
+itemCapacity: 20
+liquidCapacity: 40
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+// 1.5 seconds (90 frames / 60 FPS)
+craftTime: 40
+craftEffect: pulverizeMedium
+
+consumes: {
+  // Set to 0.6666667 to achieve exactly 40 power units per second (40/60)
+  power: 0.6666667
+  items: [
+    coal/8
+    sand/1
+  ]
+  liquids: [
+    water/0.05
+  ]
+}
+
+outputItem: graphite/8
+// remember the fact that vanilla graphite press uses 2 coal to produce 1 graphite
+
+requirements: [
+  lead/165
+  graphite/255
+  silicon/200
+  plastanium/120
+  thorium/175
+]
+
+category: crafting
+research: oven

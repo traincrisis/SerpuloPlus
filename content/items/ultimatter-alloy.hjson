@@ -1,0 +1,14 @@
+name: Ultimatter Alloy
+description: An anomalous supercharged alloy created from cryogenic alloy. Used in extremely powerful defense structures and construction.
+details: "Mysterious creation power superimposed onto cryogenic alloy. Created from an unknown error within the cryogenic smelter and crucible that charged it with unimaginable power. Further data from analysis unknown."
+color: 7d3191
+charge: 1.5
+radioactivity: 0.1
+cost: 1
+healthScaling: 3.5
+cost: 12.0
+
+research: {
+  parent: cryogenic-alloy
+  planet: serpulo
+} 

@@ -1,0 +1,72 @@
+type: flying
+name: Delta
+description: Defends the Apex core from enemies. Builds structures.
+flying: true
+health: 320
+armor: 0
+hitSize: 12.5
+speed: 4.31026
+accel: 0.1
+drag: 0.05
+mineTier: 3
+mineSpeed: 10
+buildSpeed: 1.5
+itemCapacity: 100
+lowAltitude: true
+
+engineSize: 0
+
+engines: [
+  {
+    x: 0
+    y: -7
+    radius: 3
+    rotation: 270
+  }
+]
+
+weapons: [
+  {
+    name: delta-bullet
+    x: 1
+    y: 5
+    shootY: 2
+    reload: 30
+    alternate: true
+    recoil: 1
+    top: false
+    shootSound: shootAlpha
+    shoot: {
+      type: ShootPattern
+      shots: 3
+      shotDelay: 4
+    }
+    inaccuracy: 1
+    bullet: {
+      type: LaserBoltBulletType
+      damage: 22
+      speed: 4
+      lifetime: 80
+      homingPower: 0.15
+      homingRange: 80
+      width: 1.5
+      height: 5
+      
+      hitEffect: hitBulletColor
+      despawnEffect: hitBulletColor
+      shootEffect: shootSmallColor
+      smokeEffect: hitLaserColor
+      
+      trailWidth: 1.2
+      trailLength: 4
+      
+      frontColor: ffffff
+      backColor: ffd27e
+      trailColor: ffd37f
+      hitColor: ffd37f
+      lightColor: ffd37f
+      
+      buildingDamageMultiplier: 0.01
+    }
+  }
+]

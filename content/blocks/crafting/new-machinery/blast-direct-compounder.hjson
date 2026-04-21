@@ -1,0 +1,67 @@
+type: GenericCrafter
+name: Blast Direct Compounder
+description: "Produces blast compound from an internal process of combination of spores and pyratite. Requires oil, graphite, lead, and lubricant to operate."
+size: 8
+health: 3010
+itemCapacity: 120
+liquidCapacity: 480
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+# 1.0s cycle
+craftTime: 60
+
+consumes: {
+  # 1700 power/sec
+  power: 28.33333333
+  items: [
+    coal/7
+    lead/8
+    sand/6
+    graphite/2
+  ]
+  liquids: [
+    oil/0.25
+    slag/0.6
+    lubricant/0.8
+  ]
+}
+
+outputItem: blast-compound/15
+
+requirements: [
+  copper/790
+  lead/945
+  titanium/660
+  silicon/1225
+  thorium/400
+  graphite/520
+  metaglass/430
+  plastanium/465
+  phase-fabric/710
+]
+
+category: crafting
+
+
+research: {
+  parent: blast-direct-centrifuge
+  requirements: [
+    copper/50000
+    lead/60000
+    silicon/80870
+    titanium/20400
+    graphite/48440
+    metaglass/39030
+    plastanium/11000
+    phase-fabric/7100
+  ]
+  objectives: [
+    blast-compounder
+    pyratite-compounder
+    water-rig
+    incubator
+  ]
+} 
+

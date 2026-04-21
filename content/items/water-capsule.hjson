@@ -1,0 +1,8 @@
+name: Water Capsule
+description: Used in storage of water.
+color: 596ab8
+
+research: {
+  parent: liquid-capsule
+  planet: serpulo
+} 

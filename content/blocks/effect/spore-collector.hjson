@@ -1,0 +1,26 @@
+type: GenericCrafter
+name: Spore Collector
+description: "Collects spores from its surroundings within a square range."
+size: 2
+health: 320
+category: effect
+hasPower: true
+hasItems: true
+itemCapacity: 10
+craftTime: 60
+
+consumes: {
+  power: 2.0
+}
+
+# The JS will physically add the items, but this defines the output for the UI
+outputItem: spore-pod/1
+
+requirements: [
+  lead/65
+  silicon/90
+  phase-fabric/100
+  titanium/70
+]
+
+research: spore-invader

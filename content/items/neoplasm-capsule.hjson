@@ -1,0 +1,8 @@
+name: Neoplasm Capsule
+description: Used in storage of neoplasm.
+color: c33e2b
+
+research: {
+  parent: liquid-capsule
+  planet: serpulo
+} 

@@ -1,0 +1,54 @@
+type: GenericCrafter
+name: Scrap Melder
+description: Melds graphite, titanium and thorium into scrap.
+size: 3
+health: 395
+itemCapacity: 20
+hasPower: true
+hasItems: true
+
+// 0.5 seconds (30 frames)
+craftTime: 30
+craftEffect: smeltsmoke
+ambientSound: loopGrind
+
+consumes: {
+  // 1.0 * 60 frames = 60 power units per second
+  power: 1.0
+  items: [
+    graphite/1
+    thorium/1
+    titanium/1
+  ]
+}
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawRegion
+      suffix: -rotator
+      spinSprite: true
+      rotateSpeed: 8.5
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+outputItem: scrap/3
+
+requirements: [
+  copper/130
+  lead/120
+  titanium/110
+  plastanium/50
+]
+
+category: crafting
+research: disassembler

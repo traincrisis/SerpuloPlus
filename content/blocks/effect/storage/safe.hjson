@@ -1,0 +1,14 @@
+type: StorageBlock
+name: Safe
+description: "Stores a massive amount of items of each type. Expands storage when placed next to a core. Contents can be retrieved with an unloader."
+size: 4
+itemCapacity: 5000
+
+requirements: [
+  titanium/1500
+  thorium/1025
+  plastanium/1015
+]
+
+category: effect
+research: vault

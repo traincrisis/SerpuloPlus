@@ -1,0 +1,59 @@
+type: GenericCrafter
+name: Surge Refinery
+description: Fuses titanium, lead, silicon, and copper into surge alloy. Requires water as coolant, and pyratite as an additional heat source.
+size: 5
+// 5x5 bc the vanilla surge smelter is 3x3 not 2x2
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 80
+liquidCapacity: 100
+
+craftTime: 120
+// 1.5 seconds
+
+craftEffect: smeltsmoke
+ambientSound: loopSmelter
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawFlame
+      flameColor: ffc999
+      flameRadius: 7.5
+      flameRadiusMag: 2.5
+    }
+  ]
+}
+
+consumes: {
+  power: 7.33333333333
+  // 310 power/sec
+  items: [
+    copper/30
+    lead/40
+    titanium/20
+    silicon/30
+    pyratite/8
+  ]
+  liquids: [
+    water/0.8
+  ]
+}
+
+outputItem: surge-alloy/20
+
+requirements: [
+  lead/350
+  thorium/200
+  silicon/120
+  surge-alloy/250
+  plastanium/200
+]
+
+category: crafting
+research: kinetic-crucible

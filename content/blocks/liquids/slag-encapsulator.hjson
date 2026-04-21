@@ -1,0 +1,50 @@
+type: GenericCrafter
+name: Slag Encapsulator
+description: Fills liquid capsules with slag.
+size: 2
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 10
+liquidCapacity: 60
+
+consumes: {
+  power: 1
+  items: [
+    liquid-capsule/1
+  ]
+  liquid: slag/0.16666666666
+}
+
+craftTime: 45
+outputItem: slag-capsule/1
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: slag
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+# The classic Serpulo smoke effect
+ambientSound: loopCultivator
+
+requirements: [
+  metaglass/100
+  graphite/135
+  titanium/65
+  silicon/95
+]
+
+category: liquid
+research: capsule-assembler

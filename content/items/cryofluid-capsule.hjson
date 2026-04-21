@@ -1,0 +1,8 @@
+name: Cryofluid Capsule
+description: Used in storage of cryofluid.
+color: 6ecdec
+
+research: {
+  parent: oil-capsule
+  planet: serpulo
+} 

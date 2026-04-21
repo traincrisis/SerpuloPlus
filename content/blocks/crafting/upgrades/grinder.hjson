@@ -1,0 +1,59 @@
+type: GenericCrafter
+name: Grinder
+description: "Crushes scrap into fine sand. Requires water as coolant."
+size: 2
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 20
+liquidCapacity: 20
+
+# 0.5s cycle
+craftTime: 30
+
+consumes: {
+  power: 1.5
+  items: [
+    scrap/1
+  ]
+  liquid: {
+    liquid: water
+    amount: 0.1
+  }
+}
+
+outputItem: sand/3
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: "-rotator"
+      spinSprite: true
+      rotateSpeed: 5
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
+
+ambientSound: loopGrind
+ambientSoundVolume: 0.05
+
+craftEffect: pulverize
+updateEffect: pulverizeSmall
+
+requirements: [
+  copper/80
+  lead/40
+  titanium/25
+]
+
+category: crafting
+research: burner 

@@ -1,0 +1,62 @@
+type: GenericCrafter
+name: Blast Direct Centrifuge
+description: "Produces blast compound from an internal process of combination of spores and pyratite. Requires coal, graphite, oil and slag to operate."
+size: 6
+health: 1505
+itemCapacity: 80
+liquidCapacity: 320
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+# 1 second = 60 ticks
+craftTime: 60
+ambientSound: loopMachineSpin
+
+consumes: {
+  # Sum of all 4 blocks: 1.33 + 0.67 + 3.83 + 4.67
+  power: 10.5
+  items: [
+    graphite/1
+    coal/1
+  ]
+  liquids: [
+    # 5/sec oil
+    oil/0.3
+    # 12/sec slag
+    slag/0.2
+  ]
+}
+
+outputItem: blast-compound/8
+
+requirements: [
+  copper/595
+  lead/655
+  silicon/870
+  titanium/200
+  graphite/440
+  metaglass/330
+  plastanium/100
+]
+
+category: crafting
+
+research: {
+  parent: blast-direct-mixer
+  requirements: [
+    copper/5595
+    lead/6655
+    silicon/8870
+    titanium/2200
+    graphite/4440
+    metaglass/3330
+    plastanium/1100
+  ]
+  objectives: [
+    blast-centrifuge
+    pyratite-centrifuge
+    water-bore
+    incubator
+  ]
+} 

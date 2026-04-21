@@ -1,0 +1,27 @@
+type: GenericCrafter
+name: Spore Invader
+description: "Releases spores into its surroundings within a square range."
+size: 2
+health: 320
+category: effect
+hasItems: true
+itemCapacity: 10
+craftTime: 60
+rotate: false
+solid: true
+
+consumes: {
+  power: 2.0
+  items: [
+    spore-pod/1
+  ]
+}
+
+requirements: [
+  lead/65
+  silicon/100
+  phase-fabric/100
+  titanium/70
+]
+
+research: cultivator

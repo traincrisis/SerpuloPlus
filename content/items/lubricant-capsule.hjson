@@ -1,0 +1,9 @@
+name: Lubricant Capsule
+description: Used in storage of lubricant.
+color: 73d941
+flammability: 0.2
+
+research: {
+  parent: liquid-capsule
+  planet: serpulo
+} 

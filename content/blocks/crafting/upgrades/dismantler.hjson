@@ -1,0 +1,64 @@
+type: Separator
+name: Dismantler
+description: Separates slag into trace amounts of exotic mineral components at low efficiency. Can produce plastanium and phase fabric.
+size: 4
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 40
+liquidCapacity: 120
+
+consumes: {
+  power: 6
+  items: [
+    scrap/2
+  ]
+  liquid: slag/0.2
+}
+
+# Separators use 'craftTime' but define outputs in 'results'
+craftTime: 30
+
+# Each entry represents the weight of the item being picked
+results: [
+  titanium/35
+  thorium/30
+  plastanium/25
+  phase-fabric/10
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: slag
+      padding: 3
+    }
+    {
+      type: DrawRegion
+      suffix: "-spinner"
+      spinSprite: true
+      # High-speed T3 rotation (doubled from vanilla)
+      rotateSpeed: 6.0
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  titanium/250
+  thorium/120
+  silicon/180
+  plastanium/150
+  phase-fabric/90
+]
+
+category: crafting
+research: vaporizer

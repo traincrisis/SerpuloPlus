@@ -1,0 +1,92 @@
+type: GenericCrafter
+name: Cell Incubator
+description: Incubates neoplastic cells from phase and injects into water to produce neoplasm.
+size: 2
+liquidCapacity: 40
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 10
+
+craftTime: 60
+updateEffect: none
+craftEffect: none
+ambientSound: loopMachineSpin
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    # Water mask
+    {
+      type: DrawLiquidRegion
+      drawLiquid: water
+      suffix: "-middle"
+    }
+    # Neoplasm mask over water
+    {
+      type: DrawLiquidRegion
+      drawLiquid: neoplasm
+      suffix: "-middle"
+    }
+    {
+      type: DrawWarmupRegion
+      sinMag: 0.1
+      color: ffffff44
+    }
+    {
+      type: DrawRegion
+      suffix: "-spin"
+      spinSprite: true
+      rotateSpeed: 10
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
+
+consumes: {
+  power: 1.6666667
+  items: [
+    spore-pod/1
+    phase-fabric/1
+  ]
+  liquid: water/0.3
+}
+
+outputLiquid: neoplasm/0.3
+
+requirements: [
+  surge-alloy/65
+  plastanium/55
+  graphite/35
+  silicon/10
+  phase-fabric/15
+]
+
+category: crafting
+research: {
+  parent: surge-smelter
+  planet: serpulo
+  requirements: [
+    surge-alloy/7500
+    plastanium/5500
+    graphite/3600
+    silicon/1300
+    phase-fabric/1500
+  ]
+  objectives: [
+    {
+      type: SectorComplete
+      preset: taintedWoods
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+type: GenericCrafter
+name: Cell Plant
+description: "Incubates neoplastic cells from phase and injects into water to produce neoplasm. Requires thorium as additional injection, and lubricant to operate."
+size: 4
+liquidCapacity: 180
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 40
+
+craftTime: 60
+updateEffect: none
+craftEffect: none
+ambientSound: loopMachineSpin
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    # Water rendered first through the middle mask
+    {
+      type: DrawLiquidRegion
+      drawLiquid: water
+      suffix: "-middle"
+    }
+    # Neoplasm rendered over water through the same mask
+    {
+      type: DrawLiquidRegion
+      drawLiquid: neoplasm
+      suffix: "-middle"
+    }
+    {
+      type: DrawWarmupRegion
+      sinMag: 0.2
+      color: ffffff66
+    }
+    {
+      type: DrawRegion
+      suffix: "-spin"
+      spinSprite: true
+      rotateSpeed: 15
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
+
+consumes: {
+  power: 9
+  items: [
+    spore-pod/9
+    phase-fabric/6
+    thorium/3
+  ]
+  liquids: [
+    water/1.03333333333
+    lubricant/1
+  ]
+}
+
+outputLiquid: neoplasm/1.03333333333
+
+requirements: [
+  plastanium/190
+  metaglass/280
+  neoplastic-alloy/170
+  cryogenic-alloy/160
+  graphite/180
+  silicon/195
+  phase-fabric/145
+  thorium/185
+]
+
+category: crafting
+research: cryogenic-chiller

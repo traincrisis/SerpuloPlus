@@ -1,0 +1,148 @@
+name: Forsaken Spirit
+description: "Azathoth's younger and nicer brother. [scarlet]Avoid this doomsday machine at all cost."
+type: flying
+health: 2147483647
+armor: 2147483647
+speed: 0.5
+rotateSpeed: 2.0
+hitSize: 72
+flying: true
+lowAltitude: true
+hidden: true
+killable: false
+
+engines: [
+  // Left Thruster
+  {
+    x: -22
+    y: -35
+    radius: 8
+    rotation: 270
+  }
+  // Right Thruster
+  {
+    x: 22
+    y: -35
+    radius: 8
+    rotation: 270
+  }
+  // Main Center Thruster
+  {
+    x: 0
+    y: -42
+    radius: 8
+    rotation: 270
+  }
+]
+
+weapons: [
+  // Front Lasers
+  {
+    name: spirit-laser
+    x: 11
+    y: 6
+    reload: 45
+    mirror: true
+    rotate: true
+    shootSound: explosionObviate
+    bullet: {
+      type: LaserBulletType
+      damage: 2147483647
+      length: 800
+      width: 60
+      colors: ["800000", "ff0000", "ffffff"]
+    }
+  }
+  // Back Lasers (Negative Y moves them to the rear)
+  {
+    name: spirit-laser
+    x: 15
+    y: -23
+    reload: 45
+    mirror: true
+    rotate: true
+    shootSound: explosionObviate
+    bullet: {
+      type: LaserBulletType
+      damage: 2147483647
+      length: 800
+      width: 60
+      colors: ["800000", "ff0000", "ffffff"]
+    }
+  }
+  // Main Side Cannons
+  {
+    name: spirit-bullet
+    x: 26
+    y: 14
+    reload: 3
+    mirror: true 
+    alternate: true
+    rotate: true
+    shootSound: shootScepter
+    bullet: {
+      type: BasicBulletType
+      speed: 12
+      damage: 2147483647
+      width: 25
+      height: 35
+      homingPower: 1
+      homingRange: 1500
+      lifetime: 100
+      splashDamage: 2147483647
+      splashDamageRadius: 80 
+      hitSound: explosionDull
+      despawnSound: explosionDull
+      fragBullets: 5
+      fragVelocityMin: 1
+      fragVelocityMax: 2
+      fragBullet: {
+        type: BasicBulletType
+        damage: 2147483647
+        speed: 10
+        homingPower: 1
+        splashDamage: 2147483647
+        splashDamageRadius: 40
+        hitSound: shockBullet
+        despawnSound: shockBullet
+      }
+    }
+  }
+  {
+    name: spirit-bullet
+    x: 30
+    y: -16
+    reload: 3
+    mirror: true 
+    alternate: true
+    rotate: true
+    shootSound: shootScepter
+    bullet: {
+      type: BasicBulletType
+      speed: 12
+      damage: 2147483647
+      width: 25
+      height: 35
+      homingPower: 1
+      homingRange: 1500
+      lifetime: 100
+      splashDamage: 2147483647
+      splashDamageRadius: 80 
+      hitSound: explosionDull
+      despawnSound: explosionDull
+      fragBullets: 5
+      fragVelocityMin: 1
+      fragVelocityMax: 2
+      fragBullet: {
+        type: BasicBulletType
+        damage: 2147483647
+        speed: 10
+        homingPower: 1
+        splashDamage: 2147483647
+        splashDamageRadius: 40
+        hitSound: shockBullet
+        despawnSound: shockBullet
+      }
+    }
+  }
+]

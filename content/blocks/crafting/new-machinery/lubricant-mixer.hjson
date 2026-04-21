@@ -1,0 +1,63 @@
+type: GenericCrafter
+name: Lubricant Mixer
+description: Mixes oil and graphite to produce lubricant.
+size: 2
+health: 160
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 10
+liquidCapacity: 40
+
+craftTime: 90
+
+consumes: {
+  power: 0.8
+  items: [
+    graphite/4
+  ]
+  liquid: {
+    liquid: oil
+    amount: 0.2
+  }
+}
+
+outputLiquid: lubricant/0.2
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    // 1. The very base of the machine
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    // 2. The liquids (rendered on top of -bottom but under the main sprite)
+    {
+      type: DrawLiquidTile
+      drawLiquid: water
+      padding: 2
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: lubricant
+      padding: 2
+    }
+    // 3. The main machine sprite (over the liquid)
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  metaglass/250
+  lead/500
+  titanium/100
+  silicon/90
+  plastanium/50
+  graphite/50
+]
+
+category: crafting
+research: cryofluid-mixer

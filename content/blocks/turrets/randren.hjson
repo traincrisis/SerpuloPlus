@@ -1,0 +1,86 @@
+type: ItemTurret
+name: Randren
+description: "Charges and fires a fragmenting energy star at air targets over extreme distances."
+size: 4
+range: 480 
+reload: 452.76 
+shootSound: shootLancer
+
+# 1.5 second charge
+shoot: {
+  firstShotDelay: 90
+}
+
+ammoTypes: {
+  surge-alloy: {
+    type: BasicBulletType
+    damage: 350
+    speed: 8.5 
+    lifetime: 56.5
+    width: 16
+    height: 16
+    
+    sprite: bullet 
+    trailLength: 10
+    trailWidth: 3
+    trailColor: 7cff8e
+    spin: 4 
+    
+    frontColor: 7cff8e
+    backColor: 45ff5e
+    status: corroded
+    statusDuration: 240
+    
+    fragBullets: 5
+    fragVelocityMin: 0.8
+    fragVelocityMax: 1.5
+    fragBullet: {
+      type: BasicBulletType
+      sprite: bullet 
+      damage: 150
+      speed: 3
+      lifetime: 45
+      status: melting
+      statusDuration: 300
+      frontColor: ffa64d
+      backColor: f0511d
+      shrinkX: 1
+      shrinkY: 1
+    }
+  }
+}
+
+# RESTORED: This is why it was missing from the menu
+consumes: {
+  power: 12.0
+  liquid: {
+    liquid: oil
+    amount: 0.2
+  }
+  coolant: {
+    amount: 0.5
+  }
+}
+
+coolantMultiplier: 3 
+
+requirements: [
+  copper/450
+  lead/430
+  silicon/400
+  plastanium/100
+  cryogenic-alloy/10
+]
+
+category: turret
+
+research: {
+  parent: rowhammer
+  requirements: [
+    copper/4500
+    lead/4300
+    silicon/4000
+    plastanium/1000
+    cryogenic-alloy/100
+  ]
+}

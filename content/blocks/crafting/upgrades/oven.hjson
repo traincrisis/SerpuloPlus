@@ -1,0 +1,64 @@
+type: GenericCrafter
+name: Oven
+description: Smelts sand and lead into metaglass, using pyratite as an additional heat source.
+size: 3
+hasItems: true
+hasPower: true
+itemCapacity: 30
+
+craftTime: 72
+// 1.4 seconds * 60 frames = 84
+
+consumes: {
+  power: 4.1
+  // 246 units / 60 frames = 4.1
+  items: [
+    lead/4
+    sand/4
+    pyratite/1
+  ]
+}
+
+outputItem: metaglass/10
+
+craftEffect: smeltsmoke
+ambientSound: loopSmelter
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    # 1. Base layer (Always visible)
+    {
+      type: DrawDefault
+    }
+    # 2. Top Sprite - ONLY visible when active
+    {
+      type: DrawWarmupRegion
+      # This FORCES the engine to show original colors (No Tint)
+      color: ffffffff
+      # Keep it steady, no pulsing
+      sinMag: 0
+    }
+    # 3. The "Surge Circle" - Rendered on the very top
+    {
+      type: DrawFlame
+      # Inner color (Alloy glow)
+      flameColor: ffc099
+      # Border color you requested
+      flameRadius: 4
+      flameRadiusMag: 1.2
+      # This mimics the border effect by layering a second bloom
+      lightRadius: 5
+    }
+  ]
+}
+
+requirements: [
+  metaglass/110
+  titanium/120
+  lead/60
+  graphite/35
+]
+
+category: crafting
+research: silicon-crucible

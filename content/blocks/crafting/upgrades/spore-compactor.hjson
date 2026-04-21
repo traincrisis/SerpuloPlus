@@ -1,0 +1,61 @@
+type: GenericCrafter
+name: Spore Compactor
+description: "Compresses spore pods into oil. Requires cryofluid as coolant, and lubricant to operate."
+size: 4
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 40
+liquidCapacity: 120
+
+# 1.0s cycle
+craftTime: 60
+
+consumes: {
+  power: 3.75
+  items: [
+    spore-pod/12
+  ]
+  liquids: [
+    cryofluid/0.25
+    lubricant/0.4
+  ]
+}
+
+outputLiquid: oil/0.9
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    {
+      type: DrawPistons
+      sinMag: 1
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: oil
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
+
+requirements: [
+  lead/160
+  silicon/285
+  thorium/160
+  plastanium/420
+  phase-fabric/220
+]
+
+category: crafting
+research: coal-solidifier

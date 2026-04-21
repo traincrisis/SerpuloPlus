@@ -1,0 +1,51 @@
+type: GenericCrafter
+name: Copper Rig
+description: "Extracts copper. Used in locations where copper ore is too far away or unavailable. Requires lubricant to operate."
+size: 4
+hasItems: true
+hasPower: true
+itemCapacity: 20
+liquidCapacity: 120
+
+craftTime: 30
+craftEffect: smeltsmoke
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: "-rotator"
+      rotateSpeed: 2.8
+      spinSprite: true
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
+
+consumes: {
+  power: 7.0
+  liquids: [
+    lubricant/0.4
+  ]
+}
+
+outputItem: copper/3
+
+requirements: [
+  copper/660
+  lead/560
+  graphite/460
+  phase-fabric/590
+  plastanium/600
+  surge-alloy/350
+]
+
+category: production
+research: water-rig

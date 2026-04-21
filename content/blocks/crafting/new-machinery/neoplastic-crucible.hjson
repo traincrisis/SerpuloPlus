@@ -1,0 +1,61 @@
+type: GenericCrafter
+name: Neoplastic Crucible
+description: "Fuses surge alloy and phase fabric glueing it with graphite and dipping into neoplasm to neoplastic alloy. Requires water as coolant."
+size: 4
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 40
+liquidCapacity: 130
+
+# 1 second = 60 ticks
+craftTime: 90
+
+consumes: {
+  power: 4.66666666667
+  items: [
+    surge-alloy/5
+    graphite/10
+    phase-fabric/5
+  ]
+  liquids: [
+    neoplasm/0.33333333333
+    water/0.5
+  ]
+}
+
+outputItem: neoplastic-alloy/8
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawWarmupRegion
+    }
+    # Re-added the flame layer
+    {
+      type: DrawFlame
+      flameColor: ffc999
+      flameRadius: 5.5
+      flameRadiusMag: 2.5
+    }
+  ]
+}
+
+craftEffect: smeltsmoke
+ambientSound: loopSmelter
+
+requirements: [
+  surge-alloy/140
+  plastanium/120
+  neoplastic-alloy/120
+  cryogenic-alloy/825
+  phase-fabric/855
+  silicon/665
+]
+
+category: crafting
+research: cell-grower

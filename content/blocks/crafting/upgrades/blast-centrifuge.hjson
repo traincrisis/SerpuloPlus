@@ -1,0 +1,39 @@
+type: GenericCrafter
+name: Blast Centrifuge
+description: Produces blast compound from pyratite and spore pods. Requires oil for extra explosiveness.
+size: 3
+itemCapacity: 20
+liquidCapacity: 40
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+// 1 second (60 frames)
+craftTime: 90
+ambientSound: loopMachineSpin
+
+consumes: {
+  // 80 power units per second / 60 frames = 1.3333333
+  power: 3
+  items: [
+    pyratite/6
+    spore-pod/6
+  ]
+  liquid: {
+    liquid: oil
+    amount: 0.3
+    // 5 units per second / 60 frames = 0.08333333
+  }
+}
+
+outputItem: blast-compound/6
+
+requirements: [
+  copper/40
+  lead/150
+  titanium/100
+  silicon/250
+]
+
+category: crafting
+research: pyratite-centrifuge

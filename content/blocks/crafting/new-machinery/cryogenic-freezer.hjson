@@ -1,0 +1,85 @@
+type: Separator
+name: Cryogenic Freezer
+description: Mixes together neoplastic alloy, dipping into cryofluid, glueing it with graphite into cryogenic alloy. 
+size: 3
+category: crafting
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 20
+
+consumes: {
+  power: 4.3333333
+  items: [
+    neoplastic-alloy/1
+    graphite/2
+  ]
+  liquid: cryofluid/0.10833333
+}
+
+# Separators use 'craftTime' but define outputs in 'results'
+craftTime: 75
+
+# Each entry represents the weight of the item being picked
+results: [
+  cryogenic-alloy/99
+  ultimatter-alloy/1
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    # 1. Base layer (Always visible)
+    {
+      type: DrawDefault
+    }
+    # 2. Top Sprite - ONLY visible when active
+    {
+      type: DrawWarmupRegion
+    }
+    # 3. The "Surge Circle" - Rendered on the very top
+    {
+      type: DrawFlame
+      # Inner color (Alloy glow)
+      flameColor: 99c9ff
+      # Border color you requested
+    }
+  ]
+}
+
+# The classic Serpulo smoke effect
+ambientSound: loopSmelter
+
+requirements: [
+  plastanium/290
+  thorium/360
+  neoplastic-alloy/80
+  phase-fabric/70
+  surge-alloy/80
+  silicon/80
+]
+
+research: {
+  parent: neoplastic-smelter
+  planet: serpulo
+  requirements: [
+    neoplastic-alloy/8500
+    phase-fabric/7200
+    surge-alloy/8100
+    silicon/8600
+  ]
+  objectives: [
+    {
+      type: SectorComplete
+      preset: littoralShipyard
+    }
+    {
+      type: SectorComplete
+      preset: atolls
+    }
+    {
+      type: SectorComplete
+      preset: sunkenPier
+    }
+  ]
+}

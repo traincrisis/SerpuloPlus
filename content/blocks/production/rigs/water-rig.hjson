@@ -1,0 +1,56 @@
+type: SolidPump
+name: Water Rig
+description: "Extracts groundwater. Used in locations with no surface water available. Requires graphite as lubricant, and lead as sealant."
+size: 4
+liquidCapacity: 120
+
+# Exact output: 45.5 / 60 = 0.75833333333
+pumpAmount: 1
+result: water
+attribute: water
+envRequired: 1 # Env.groundWater
+
+# Sound settings
+ambientSound: loopMachine
+ambientSoundVolume: 0.08
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: "-rotator"
+      spinSprite: true
+      # Doubled from vanilla 1.4 to 2.8
+      rotateSpeed: 2.8
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
+
+consumes: {
+  power: 6.33333333333
+  items: [
+    graphite/2
+    lead/2
+  ]
+}
+
+requirements: [
+  copper/380
+  lead/360
+  metaglass/430
+  graphite/390
+  silicon/315
+  plastanium/325
+  phase-fabric/300
+]
+
+category: production
+research: water-bore

@@ -1,0 +1,39 @@
+type: GenericCrafter
+name: Coal Compressor
+description: Transforms oil into coal. Requires water as coolant, and sand as grit.
+size: 4
+itemCapacity: 40
+liquidCapacity: 120
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+// 1.5 seconds (90 frames / 60 FPS)
+craftTime: 60
+craftEffect: coalSmeltsmoke
+
+consumes: {
+  // Set to 0.6666667 to achieve exactly 40 power units per second (40/60)
+  power: 7
+  liquids: [
+    oil/0.8
+    water/0.4
+  ]
+  items: [
+    sand/1
+  ]
+}
+
+outputItem: coal/18
+
+requirements: [
+  lead/160
+  graphite/90
+  titanium/95
+  plastanium/85
+  thorium/65
+]
+
+category: crafting
+research: spore-compactor
+ 

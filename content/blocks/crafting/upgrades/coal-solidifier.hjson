@@ -1,0 +1,35 @@
+type: GenericCrafter
+name: Coal Solidifier
+description: Transforms oil into coal. Requires water as coolant.
+size: 3
+itemCapacity: 20
+liquidCapacity: 80
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+// 1.5 seconds (90 frames / 60 FPS)
+craftTime: 60
+craftEffect: coalSmeltsmoke
+
+consumes: {
+  // Set to 0.6666667 to achieve exactly 40 power units per second (40/60)
+  power: 3.5
+  liquids: [
+    oil/0.3
+    water/0.01666666666
+  ]
+}
+
+outputItem: coal/4
+
+requirements: [
+  lead/80
+  graphite/60
+  titanium/40
+  plastanium/60
+]
+
+category: crafting
+research: spore-crusher
+ 

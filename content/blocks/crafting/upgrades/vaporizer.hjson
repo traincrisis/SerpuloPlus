@@ -1,0 +1,53 @@
+type: GenericCrafter
+name: Vaporizer
+description: Melts down scrap into slag. Requires blast compound as an additional heat source.
+size: 3
+itemCapacity: 40
+liquidCapacity: 120
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+// 0.2 seconds = 5 crafts per second
+craftTime: 60
+
+consumes: {
+  power: 4
+  items: [
+    scrap/15
+    blast-compound/1
+  ]
+}
+
+outputLiquid: {
+  liquid: slag
+  amount: 1
+}
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: slag
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  copper/250
+  lead/245
+  graphite/245
+  titanium/200
+  thorium/250
+]
+
+category: crafting
+research: burner

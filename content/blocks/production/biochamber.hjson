@@ -1,0 +1,74 @@
+type: AttributeCrafter
+name: Bio-Chamber
+description: "Cultivates tiny concentrations of atmospheric spores into spore pods. Requires coal for better incubation, and slag for thermal stimulation."
+size: 4
+hasItems: true
+hasLiquids: true
+hasPower: true
+
+# 2 seconds = 120 ticks
+craftTime: 120
+itemCapacity: 40
+liquidCapacity: 190
+
+# Spore logic
+attribute: spores
+envRequired: 1
+maxBoost: 2
+
+# Sound
+ambientSound: loopCultivator
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: water
+      // This is the "base" pool
+    }
+    {
+      type: DrawCultivator
+      // THIS draws the animated spores and their water overlay.
+      // We put it UNDER the main sprite so it only shows through the hole.
+    }
+    {
+      type: DrawDefault 
+      // This is your suffixless sprite. 
+      // It now acts as a 'mask' over the messy cultivator animation.
+    }
+    {
+      type: DrawRegion
+      suffix: -top
+    }
+  ]
+}
+
+consumes: {
+  power: 4.66666666667
+  items: [
+    coal/4
+  ]
+  # 24/sec total consumption
+  liquids: [
+    water/0.8
+    slag/0.2
+  ]
+}
+
+outputItem: spore-pod/12
+
+requirements: [
+  lead/245
+  silicon/220
+  graphite/130
+  plastanium/140
+  phase-fabric/110
+]
+
+category: production
+research: water-rig

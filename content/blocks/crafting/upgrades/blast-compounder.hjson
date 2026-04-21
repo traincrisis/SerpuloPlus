@@ -1,0 +1,39 @@
+type: GenericCrafter
+name: Blast Compounder
+description: Produces blast compound from pyratite and spore pods. Requires oil for extra explosiveness, and lubricant to operate.
+size: 4
+itemCapacity: 40
+liquidCapacity: 90
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+// 1 second (60 frames)
+craftTime: 60
+ambientSound: loopMachineSpin
+
+consumes: {
+  // 80 power units per second / 60 frames = 1.3333333
+  power: 9.33333333333
+  items: [
+    pyratite/12
+    spore-pod/12
+  ]
+  liquids: [
+    oil/0.25
+    lubricant/0.4
+  ]
+}
+
+outputItem: blast-compound/15
+
+requirements: [
+  copper/160
+  lead/240
+  titanium/230
+  silicon/340
+  thorium/250
+]
+
+category: crafting
+research: pyratite-compounder

@@ -1,0 +1,45 @@
+type: GenericCrafter
+name: Titanium Extractor
+description: "Extracts titanium. Used in locations where titanium ore is too far away or unavailable."
+size: 2
+hasItems: true
+hasPower: true
+
+craftTime: 112
+craftEffect: smeltsmoke
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: "-rotator"
+      rotateSpeed: 1.4
+      spinSprite: true
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
+
+consumes: {
+  power: 3.0
+}
+
+outputItem: titanium/1
+
+requirements: [
+  copper/60
+  lead/60
+  graphite/60
+  titanium/100
+  plastanium/90
+]
+
+category: production
+research: lead-extractor

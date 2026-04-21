@@ -1,0 +1,8 @@
+shownPlanets: [
+  serpulo
+  erekir
+]
+research: {
+  parent: water
+  planet: serpulo
+}

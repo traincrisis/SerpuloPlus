@@ -1,0 +1,60 @@
+type: AttributeCrafter
+name: Silicon Refinery
+description: Refines silicon from sand and coal, using blast compound and slag as additional heat sources. More efficient in hot locations.
+size: 4
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 60
+liquidCapacity: 60
+
+craftTime: 60
+
+// Visuals matched to your vanilla source snippet
+craftEffect: smeltsmoke
+ambientSound: loopSmelter
+
+attribute: heat
+boostScale: 0.15
+baseEfficiency: 1.0
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawFlame
+      flameColor: ffef99
+      flameRadius: 4.5
+      flameRadiusMag: 2.5
+    }
+  ]
+}
+
+consumes: {
+  power: 6.0
+  items: [
+    coal/8
+    sand/6
+    blast-compound/2
+  ]
+  // Use 'liquids' array to support multiple types
+  liquids: [
+    slag/0.2
+  ]
+}
+
+outputItem: silicon/12
+
+requirements: [
+  metaglass/100
+  titanium/160
+  silicon/230
+  plastanium/65
+  thorium/100
+]
+
+category: crafting
+research: graphite-compactor

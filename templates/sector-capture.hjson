@@ -1,0 +1,19 @@
+type: Wall
+name: Sector Capture Test
+description: A block only used for testing the capture sector condition.
+size: 1
+health: 1
+category: effect
+requirements: [
+  copper/1
+]
+
+research: {
+  parent: core-nucleus
+  objectives: [
+    {
+      type: SectorComplete
+      preset: weatheredChannels
+    }
+  ]
+} 

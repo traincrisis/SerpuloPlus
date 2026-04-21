@@ -1,0 +1,71 @@
+type: AttributeCrafter
+name: Incubator
+description: "Cultivates tiny concentrations of atmospheric spores into spore pods. Requires coal for better incubation."
+size: 3
+hasItems: true
+hasLiquids: true
+hasPower: true
+
+# 2 seconds = 120 ticks
+craftTime: 120
+itemCapacity: 20
+liquidCapacity: 160
+
+# Spore logic
+attribute: spores
+envRequired: 1
+maxBoost: 2
+
+# Sound
+ambientSound: loopCultivator
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: water
+      // This is the "base" pool
+    }
+    {
+      type: DrawCultivator
+      // THIS draws the animated spores and their water overlay.
+      // We put it UNDER the main sprite so it only shows through the hole.
+    }
+    {
+      type: DrawDefault 
+      // This is your suffixless sprite. 
+      // It now acts as a 'mask' over the messy cultivator animation.
+    }
+    {
+      type: DrawRegion
+      suffix: -top
+    }
+  ]
+}
+
+consumes: {
+  power: 4.66666666667
+  items: [
+    coal/1
+  ]
+  # 24/sec total consumption
+  liquid: water/0.4
+}
+
+outputItem: spore-pod/4
+
+requirements: [
+  copper/125
+  lead/125
+  silicon/110
+  graphite/110
+  plastanium/100
+]
+
+category: production
+research: water-bore

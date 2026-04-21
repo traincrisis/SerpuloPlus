@@ -1,0 +1,75 @@
+type: ConsumeGenerator
+name: Cell Reactor
+description: Generates huge amounts of power from biological liquid tumor. Requires feeding with water.
+size: 4
+category: power
+hasPower: true
+hasLiquids: true
+liquidCapacity: 120
+
+powerProduction: 58.3333333
+
+consumes: {
+  liquids: [
+    neoplasm/0.25
+    water/0.08
+  ]
+}
+
+itemDuration: 60
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: neoplasm
+      suffix: "-liquid1"
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: water
+      suffix: "-liquid2"
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawGlowRegion
+      suffix: -glow
+      color: ffc755
+    }
+  ]
+}
+
+ambientSound: loopBio
+ambientSoundVolume: 0.15
+
+requirements: [
+  neoplastic-alloy/150
+  surge-alloy/100
+  phase-fabric/250
+  lead/500
+  silicon/400
+]
+explosionRadius: 45
+explosionDamage: 2000
+explosionPuddles: 15
+explosionPuddleRange: 16
+explosionPuddleAmount: 200
+explosionPuddleLiquid: neoplasm
+explosionShake: 15
+research: {
+  parent: rtg-generator
+  planet: serpulo
+  costs: [
+    neoplastic-alloy/1500
+    surge-alloy/1000
+    phase-fabric/2000
+    silicon/4000
+  ]
+}

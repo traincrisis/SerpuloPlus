@@ -1,0 +1,44 @@
+type: GenericCrafter
+name: Copper Extractor
+description: "Extracts copper. Used in locations where copper ore is too far away or unavailable."
+size: 2
+hasItems: true
+hasPower: true
+
+craftTime: 112
+craftEffect: smeltsmoke
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: "-rotator"
+      rotateSpeed: 1.4
+      spinSprite: true
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
+
+consumes: {
+  power: 3.0
+}
+
+outputItem: copper/1
+
+requirements: [
+  copper/160
+  lead/60
+  graphite/60
+  plastanium/90
+]
+
+category: production
+research: water-extractor
