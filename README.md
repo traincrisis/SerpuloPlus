@@ -17,4 +17,4 @@ Upcoming features:
 - Cryogenic & Ultimatter Processors
 ---
 *Note: This mod is currently in development and unfinished. More content will be added!
-The mod is designed for the latest version of the game, V8. If you are using V7 (Build 146), the mod will not work.
+The mod is designed for the latest version of the game, V8. If you are using V7 (Build 146), the mod will not work.*
