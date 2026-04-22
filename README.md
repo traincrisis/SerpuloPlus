@@ -1,4 +1,7 @@
-# Serpulo+
+<h1 align="center">
+  <img src="icon.png" width="150" alt="Icon">
+</h1>
+
 Serpulo+ is a personalized content expansion mod for Mindustry, focused on adding Serpulo content. 
 Features:
 - Tier 2 and Tier 3 upgrades for vanilla crafters (examples: Silicon Refinery as the Tier 3 of the Silicon Smelter, and Plastanium Infuser as the Tier 2 of the Plastanium Compressor)
