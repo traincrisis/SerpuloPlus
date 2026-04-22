@@ -21,8 +21,3 @@ Upcoming features:
 ---
 *Note: This mod is currently in development and unfinished. More content will be added!
 The mod is designed for the latest version of the game, V8. If you are using V7 (Build 146), the mod will not work.*
-
-I like sandbox games. Mindustry is my most often played game.
-I may join TPCS as lithican if my status is DND and"not home"
-My midnight (00:00) is your <t:1776459608:t>
-I live in Ukraine:flag_ua:
