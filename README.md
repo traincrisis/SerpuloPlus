@@ -13,11 +13,9 @@ Features:
 - 5 new turrets: Tesla, Vitreous, Randren, Rowhammer, and Stuxnet.
 ---
 Upcoming features:
-- The Ultimatter Accelerator, which is dedicated to making Ultimatter Alloy.
 - T6 and T7 units
 - A few new sectors
-- Tier 2 and Tier 3 versions of the Lubricant Mixer
-- Cryogenic & Ultimatter Processors
+- Tiers for more blocks: drills, turrets, and conveyors
 ---
 *Note: This mod is currently in development and unfinished. More content will be added!
 The mod is designed for the latest version of the game, V8. If you are using V7 (Build 146), the mod will not work.*
