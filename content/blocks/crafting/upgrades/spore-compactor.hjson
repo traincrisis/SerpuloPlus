@@ -6,7 +6,7 @@ hasPower: true
 hasItems: true
 hasLiquids: true
 itemCapacity: 40
-liquidCapacity: 120
+liquidCapacity: 160
 
 # 1.0s cycle
 craftTime: 60
@@ -22,7 +22,7 @@ consumes: {
   ]
 }
 
-outputLiquid: oil/0.9
+outputLiquid: oil/2.4
 
 drawer: {
   type: DrawMulti

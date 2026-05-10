@@ -1,6 +1,6 @@
 type: GenericCrafter
 name: Blast Direct Compounder
-description: "Produces blast compound from an internal process of combination of spores and pyratite. Requires oil, graphite, lead, and lubricant to operate."
+description: "Produces blast compound from an internal process of combination of spores and pyratite. Requires oil, graphite, lead, lava and lubricant to operate."
 size: 8
 health: 3010
 itemCapacity: 120
@@ -23,7 +23,7 @@ consumes: {
   ]
   liquids: [
     oil/0.25
-    slag/0.6
+    lava/0.6
     lubricant/0.8
   ]
 }
@@ -61,7 +61,7 @@ research: {
     blast-compounder
     pyratite-compounder
     water-rig
-    incubator
+    biochamber
   ]
 } 
 

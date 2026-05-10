@@ -1,0 +1,69 @@
+type: GenericCrafter
+name: Steam Boiler
+description: "Converts water to steam by burning flammable materials."
+size: 2
+hasPower: false
+hasItems: true
+hasLiquids: true
+
+// Matching vanilla itemDuration (90 ticks = 1.5 seconds per coal)
+craftTime: 90
+
+consumes: {
+  items: [
+    coal/1
+  ]
+  liquid: {
+    liquid: water
+    amount: 0.1
+  }
+}
+
+outputLiquid: {
+  liquid: steam
+  amount: 0.2
+}
+
+// Matches vanilla Steam Generator visuals
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawWarmupRegion
+    }
+    // Rotating turbines from the vanilla code
+    {
+      type: DrawRegion
+      suffix: "-turbine"
+      rotateSpeed: 2
+    }
+    {
+      type: DrawRegion
+      suffix: "-turbine"
+      rotateSpeed: -2
+      rotation: 45
+    }
+    {
+      type: DrawRegion
+      suffix: "-cap"
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: water
+    }
+  ]
+}
+
+requirements: [
+    copper/800
+    graphite/300
+    metaglass/150
+]
+
+ambientSound: loopSmelter
+
+category: crafting
+research: steam-generator

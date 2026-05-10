@@ -1,0 +1,64 @@
+type: GenericCrafter
+name: Lubricant Centrifuge
+description: Mixes oil and graphite to produce lubricant, using pyratite as an additional heat source.
+size: 3
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 20
+liquidCapacity: 60
+
+craftTime: 60
+
+consumes: {
+  power: 2.33333333333
+  items: [
+    graphite/6
+    pyratite/2
+  ]
+  liquid: {
+    liquid: oil
+    amount: 0.4
+  }
+}
+
+outputLiquid: lubricant/0.5
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    // 1. The very base of the machine
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    // 2. The liquids (rendered on top of -bottom but under the main sprite)
+    {
+      type: DrawLiquidTile
+      drawLiquid: water
+      padding: 2
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: lubricant
+      padding: 2
+    }
+    // 3. The main machine sprite (over the liquid)
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  metaglass/360
+  lead/630
+  titanium/260
+  silicon/150
+  plastanium/255
+  phase-fabric/160
+  graphite/105
+]
+
+category: crafting
+research: lubricant-mixer

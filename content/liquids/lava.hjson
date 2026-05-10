@@ -1,0 +1,20 @@
+name: Lava
+description: "Used in various advanced machines to use as an additional heat source."
+
+// Mid-tone green
+color: d45525
+
+// Highlight lime-green for the glow
+lightColor: ffab5e
+
+// Darker green for UI bars/depth
+barColor: 803124
+
+// Mechanical Statistics (Decimals)
+viscosity: 0.9
+heatCapacity: 0.25
+explosiveness: 0.0
+flammability: 0.0
+temperature: 1.2
+
+research: slag

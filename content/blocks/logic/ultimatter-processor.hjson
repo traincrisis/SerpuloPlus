@@ -1,0 +1,30 @@
+type: LogicBlock
+name: Ultimatter Processor
+description: Runs a sequence of logic instructions in a loop. Can be used to control units and buildings. Faster than the ultimatter processor.
+# vanilla styled description consistent with vanilla
+size: 5
+instructionsPerTick: 1000
+maxInstructionsPerTick: 4000
+
+range: 1000
+
+consumes: {
+  liquids: [
+    cryofluid/0.33333333333
+    quantofluid/0.25
+  ]
+}
+
+requirements: [
+  lead/1500
+  ultimatter-alloy/965
+  thorium/295
+  silicon/395
+  surge-alloy/655
+  phase-fabric/655
+  plastanium/955
+  cryogenic-alloy/1255
+]
+
+category: logic
+research: cryogenic-processor

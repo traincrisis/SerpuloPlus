@@ -1,0 +1,22 @@
+type: PayloadConveyor
+name: Large Payload Conveyor
+description: "Moves large payloads, such as units from factories. Magnetic. Larger and slower than a standard payload conveyor, and allows larger payloads."
+size: 5
+
+# This is the correct field from the documentation
+payloadLimit: 5.5
+
+# Slower and heavier feel
+moveTime: 75
+canOverdrive: false
+health: 1200
+
+requirements: [
+  copper/130
+  graphite/160
+  thorium/130
+  plastanium/180
+]
+
+category: units
+research: payload-router

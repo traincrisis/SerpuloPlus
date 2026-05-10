@@ -1,0 +1,63 @@
+type: GenericCrafter
+name: Quantofluid Compounder
+description: Mixes cryofluid and phase fabric to produce quantofluid. Requires surge alloy as an electromagnetic containment.
+size: 4
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 40
+liquidCapacity: 90
+
+craftTime: 120
+
+consumes: {
+  power: 6
+  items: [
+    phase-fabric/4
+    surge-alloy/1
+  ]
+  liquid: {
+    liquid: cryofluid
+    amount: 1
+  }
+}
+
+outputLiquid: quantofluid/1.08333333333
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    // 1. The very base of the machine
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    // 2. The liquids (rendered on top of -bottom but under the main sprite)
+    {
+      type: DrawLiquidTile
+      drawLiquid: cryofluid
+      padding: 2
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: quantofluid
+      padding: 2
+    }
+    // 3. The main machine sprite (over the liquid)
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  metaglass/765
+  titanium/705
+  phase-fabric/675
+  surge-alloy/785
+  silicon/495
+  graphite/655
+]
+
+category: crafting
+research: quantofluid-centrifuge

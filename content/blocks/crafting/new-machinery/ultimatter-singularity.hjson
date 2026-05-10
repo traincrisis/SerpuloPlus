@@ -1,0 +1,70 @@
+type: GenericCrafter
+name: Ultimatter Singularity
+description: "Accelerates nanoparticles of cryogenic alloys to transform it into its anomalous form. Requires phase fabric for collider shielding, and lubricant to operate."
+size: 5
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 80
+liquidCapacity: 130
+
+# High intensity, so it uses a fair bit of power for a 3x3
+# ignore the above comment
+
+consumes: {
+  power: 14.3333333333
+  items: [
+    cryogenic-alloy/30
+    graphite/50
+    phase-fabric/15
+  ]
+  liquids: [
+    cryofluid/1.16666666667
+    water/1
+    lubricant/1.16666666667
+  ]
+}
+
+# Focused acceleration - faster than the T3 byproduct chance
+craftTime: 480
+outputItem: ultimatter-alloy/25
+
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawWarmupRegion
+    }
+    # Re-added the flame layer
+    {
+      type: DrawFlame
+      flameColor: f3d4ff
+      flameRadius: 7.5
+      flameRadiusMag: 2.5
+    }
+  ]
+}
+
+craftEffect: smeltsmoke
+ambientSound: loopSmelter
+
+requirements: [
+  lead/965
+  metaglass/656
+  plastanium/1240
+  neoplastic-alloy/1256
+  cryogenic-alloy/945
+  ultimatter-alloy/955
+  phase-fabric/1795
+  surge-alloy/1695
+  silicon/1245
+  graphite/1955
+  thorium/1550
+]
+
+category: crafting
+research: ultimatter-collider

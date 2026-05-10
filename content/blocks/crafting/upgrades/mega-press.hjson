@@ -1,0 +1,39 @@
+type: GenericCrafter
+name: Mega-Press
+description: Compresses coal into graphite. Requires quantofluid as coolant and sand as stabilizer.
+size: 5
+itemCapacity: 40
+liquidCapacity: 60
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+// 1.5 seconds (90 frames / 60 FPS)
+craftTime: 15
+craftEffect: pulverizeMedium
+
+consumes: {
+  // Set to 0.6666667 to achieve exactly 40 power units per second (40/60)
+  power: 7.66666666667
+  items: [
+    coal/15
+    sand/5
+  ]
+  liquids: [
+    quantofluid/0.2
+  ]
+}
+
+outputItem: graphite/12
+// remember the fact that vanilla graphite press uses 2 coal to produce 1 graphite
+
+requirements: [
+  lead/205
+  graphite/355
+  silicon/375
+  plastanium/290
+  phase-fabric/255
+]
+
+category: crafting
+research: furnace

@@ -1,0 +1,65 @@
+type: GenericCrafter
+name: Lubricant Compounder
+description: Mixes oil and graphite to produce lubricant, using magmatite as an additional heat source. Requires quantofluid as coolant.
+size: 4
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 40
+liquidCapacity: 80
+
+craftTime: 30
+
+consumes: {
+  power: 4.33333333333
+  items: [
+    graphite/8
+    magmatite/2
+  ]
+  liquids: [
+    oil/0.8
+    quantofluid/0.2
+  ]
+}
+
+outputLiquid: lubricant/1.5
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    // 1. The very base of the machine
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    // 2. The liquids (rendered on top of -bottom but under the main sprite)
+    {
+      type: DrawLiquidTile
+      drawLiquid: water
+      padding: 2
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: lubricant
+      padding: 2
+    }
+    // 3. The main machine sprite (over the liquid)
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  metaglass/650
+  lead/760
+  titanium/390
+  silicon/255
+  plastanium/405
+  phase-fabric/240
+  surge-alloy/760
+  graphite/255
+]
+
+category: crafting
+research: lubricant-centrifuge

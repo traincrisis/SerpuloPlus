@@ -1,0 +1,61 @@
+type: GenericCrafter
+name: Lava Smelter
+description: Concentrates slag and pyratite to produce lava.
+size: 2
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 10
+liquidCapacity: 40
+
+craftTime: 30
+
+consumes: {
+  power: 1
+  items: [
+    pyratite/2
+  ]
+  liquid: {
+    liquid: slag
+    amount: 0.25
+  }
+}
+
+outputLiquid: lava/0.25
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    // 1. The very base of the machine
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    // 2. The liquids (rendered on top of -bottom but under the main sprite)
+    {
+      type: DrawLiquidTile
+      drawLiquid: slag
+      padding: 2
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: lava
+      padding: 2
+    }
+    // 3. The main machine sprite (over the liquid)
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  phase-fabric/255
+  silicon/150
+  plastanium/205
+  lead/405
+  metaglass/200
+]
+
+category: crafting
+research: lubricant-mixer

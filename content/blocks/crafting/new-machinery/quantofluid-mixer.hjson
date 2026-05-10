@@ -1,0 +1,61 @@
+type: GenericCrafter
+name: Quantofluid Mixer
+description: Mixes cryofluid and phase fabric to produce quantofluid.
+size: 2
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 10
+liquidCapacity: 40
+
+craftTime: 90
+
+consumes: {
+  power: 2.33333333333
+  items: [
+    phase-fabric/2
+  ]
+  liquid: {
+    liquid: cryofluid
+    amount: 0.16666666666
+  }
+}
+
+outputLiquid: quantofluid/0.25
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    // 1. The very base of the machine
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    // 2. The liquids (rendered on top of -bottom but under the main sprite)
+    {
+      type: DrawLiquidTile
+      drawLiquid: cryofluid
+      padding: 2
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: quantofluid
+      padding: 2
+    }
+    // 3. The main machine sprite (over the liquid)
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  metaglass/255
+  titanium/305
+  phase-fabric/205
+  silicon/125
+  graphite/255
+]
+
+category: crafting
+research: cryofluid-compounder

@@ -1,0 +1,16 @@
+name: Steam
+description: "Used in advanced power generation and industrial machinery. Highly pressurized."
+gas: true
+
+// Shifted to a bluish-silver to stay distinct from Nitrogen
+color: d1efffff
+gasColor: edf8ffff
+
+explosiveness: 0.1
+flammability: 0.0
+heatCapacity: 0.1
+viscosity: 0.15
+temperature: 0.75
+
+// Branches off water discovery
+research: water

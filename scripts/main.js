@@ -29,7 +29,6 @@ Events.run(Trigger.draw, () => {
         Draw.draw(Layer.max, () => {
             Draw.color(Color.red);
             Draw.alpha(maxIntensity * 0.7);
-            // Red overlay box
             Fill.crect(Core.camera.position.x - (Core.camera.width * 0.7), Core.camera.position.y - (Core.camera.height * 0.7), Core.camera.width * 1.4, Core.camera.height * 1.4);
         });
         Draw.reset();
@@ -52,7 +51,6 @@ Events.run(Trigger.update, () => {
             foundSpirit = true;
             let dst = u.dst(player);
             
-            // Audio Feedback: 4-Layer Drone
             if (dst < 600) {
                 let vol = 1 - (dst / 600);
                 let sounds = [Sounds.loopMalign, Sounds.loopDifferential, Sounds.loopElectricHum, Sounds.loopBio];
@@ -69,11 +67,9 @@ Events.run(Trigger.update, () => {
                 });
             }
             
-            // Trigger Jumpscare
             if (dst < 85) {
                 jumpscareTriggered = true;
                 soundIds.forEach(id => { if(id != -1) Core.audio.stop(id); });
-                
                 if (Sounds.explosionReactor) Sounds.explosionReactor.play();
                 
                 try {
@@ -107,42 +103,68 @@ Events.on(ContentInitEvent, () => {
     const col = Vars.content.block("serpuloplus-spore-collector");
 
     const dSand = Vars.content.block("darksand");
+    const dSandWater = Vars.content.block("darksand-water");
     const dSandTainted = Vars.content.block("darksand-tainted-water");
     const tWater = Vars.content.block("tainted-water");
     const dTWater = Vars.content.block("deep-tainted-water");
     const moss = Vars.content.block("moss");
     const sMoss = Vars.content.block("spore-moss");
-    const shale = Vars.content.block("shale");
     const sand = Vars.content.block("sand-floor");
     const sWater = Vars.content.block("sand-water");
-    const water = Vars.content.block("shallow-water");
+    const shWater = Vars.content.block("shallow-water");
     const dWater = Vars.content.block("deep-water");
+    const grass = Vars.content.block("grass");
+
+    const drawRange = (build) => {
+        Draw.z(Layer.overlayUI);
+        let s = 10 * Vars.tilesize;
+        let xmin = build.x - s, xmax = build.x + s;
+        let ymin = build.y - s, ymax = build.y + s;
+
+        Drawf.dashLine(Pal.accent, xmin, ymin, xmax, ymin);
+        Drawf.dashLine(Pal.accent, xmin, ymax, xmax, ymax);
+        Drawf.dashLine(Pal.accent, xmin, ymin, xmin, ymax);
+        Drawf.dashLine(Pal.accent, xmax, ymin, xmax, ymax);
+        Draw.reset();
+    };
 
     if(inv != null){
         inv.buildType = () => extend(GenericCrafter.GenericCrafterBuild, inv, {
+            drawSelect(){
+                this.super$drawSelect();
+                drawRange(this);
+            },
             updateTile(){
                 this.super$updateTile();
                 this.progress = 0; 
-                if(this.efficiency > 0 && this.items.has(Items.sporePod) && this.timer.get(0, 30)){
-                    let range = 10, found = false;
-                    for(let x = -range; x <= range && !found; x++){
-                        for(let y = -range; y <= range && !found; y++){
-                            let targetTile = Vars.world.tile(this.tileX() + x, this.tileY() + y);
+                if(this.efficiency > 0 && this.items.has(Items.sporePod) && this.timer.get(0, 30 / this.edelta())){
+                    let found = false;
+                    let tx = this.tile.x + 1;
+                    let ty = this.tile.y + 1;
+
+                    for(let x = -10; x <= 9 && !found; x++){
+                        for(let y = -10; y <= 9 && !found; y++){
+                            let targetTile = Vars.world.tile(tx + x, ty + y);
                             if(!targetTile) continue;
                             let fId = targetTile.floor().name;
                             let bId = targetTile.block().name;
                             let changed = false;
 
+                            // Floor conversions
                             if(fId === "sand-floor") { targetTile.setFloor(dSand); changed = true; }
-                            else if(fId === "sand-water" || fId === "darksand-water") { targetTile.setFloor(dSandTainted); changed = true; }
+                            else if(fId === "sand-water") { targetTile.setFloor(dSandWater); changed = true; }
+                            else if(fId === "darksand-water") { targetTile.setFloor(dSandTainted); changed = true; }
                             else if(fId === "shallow-water") { targetTile.setFloor(tWater); changed = true; }
                             else if(fId === "deep-water") { targetTile.setFloor(dTWater); changed = true; }
-                            else if(fId === "shale") { targetTile.setFloor(Math.random() < 0.01 ? sMoss : moss); changed = true; }
+                            else if(fId === "grass") { targetTile.setFloor(Math.random() < 0.01 ? sMoss : moss); changed = true; }
 
-                            if(bId === "shale-wall") { targetTile.setNet(Blocks.sporeWall); changed = true; }
+                            // Block/Tree conversions
+                            if(bId === "shrubs") { targetTile.setNet(Blocks.sporeWall); changed = true; }
                             else if(bId === "sand-wall") { targetTile.setNet(Blocks.duneWall); changed = true; }
                             else if(bId === "sand-boulder") { targetTile.setNet(Blocks.basaltBoulder); changed = true; }
-                            else if(bId === "shale-boulder") { targetTile.setNet(Blocks.sporeCluster); changed = true; }
+                            else if(bId === "beryllic-boulder") { targetTile.setNet(Blocks.sporeCluster); changed = true; }
+                            // NEW: Pine to Spore Pine
+                            else if(bId === "pine") { targetTile.setNet(Blocks.sporePine); changed = true; }
 
                             if(changed){ found = true; Fx.pulverizeSmall.at(targetTile.worldx(), targetTile.worldy()); }
                         }
@@ -157,20 +179,47 @@ Events.on(ContentInitEvent, () => {
         col.buildType = () => {
             let tickCount = 0;
             return extend(GenericCrafter.GenericCrafterBuild, col, {
+                drawSelect(){
+                    this.super$drawSelect();
+                    drawRange(this);
+                },
                 updateTile(){
                     this.super$updateTile();
                     this.progress = 0;
-                    if(this.efficiency > 0) tickCount++;
+                    if(this.efficiency > 0) tickCount += this.edelta();
                     if(tickCount >= 30){
                         tickCount = 0;
-                        let range = 10, count = 0;
-                        for(let x = -range; x <= range; x++){
-                            for(let y = -range; y <= range; y++){
-                                let targetTile = Vars.world.tile(this.tileX() + x, this.tileY() + y);
+                        let count = 0;
+                        let tx = this.tile.x + 1;
+                        let ty = this.tile.y + 1;
+
+                        for(let x = -10; x <= 9; x++){
+                            for(let y = -10; y <= 9; y++){
+                                let targetTile = Vars.world.tile(tx + x, ty + y);
                                 if(!targetTile) continue;
-                                if(targetTile.floor().name === "darksand"){ 
-                                    targetTile.setFloor(sand); 
-                                    count++; 
+                                let fId = targetTile.floor().name;
+                                let bId = targetTile.block().name;
+                                let changed = false;
+
+                                // Floor reverse
+                                if(fId === "darksand-tainted-water"){ targetTile.setFloor(dSandWater); changed = true; }
+                                else if(fId === "darksand-water"){ targetTile.setFloor(sWater); changed = true; }
+                                else if(fId === "darksand"){ targetTile.setFloor(sand); changed = true; }
+                                else if(fId === "tainted-water"){ targetTile.setFloor(shWater); changed = true; }
+                                else if(fId === "deep-tainted-water"){ targetTile.setFloor(dWater); changed = true; }
+                                else if(fId === "moss" || fId === "spore-moss"){ targetTile.setFloor(grass); changed = true; }
+
+                                // Block reverse
+                                if(bId === "spore-wall"){ targetTile.setNet(Blocks.shrubs); changed = true; }
+                                else if(bId === "dune-wall"){ targetTile.setNet(Blocks.sandWall); changed = true; }
+                                else if(bId === "basalt-boulder"){ targetTile.setNet(Blocks.sandBoulder); changed = true; }
+                                else if(bId === "spore-cluster"){ targetTile.setNet(Blocks.beryllicBoulder); changed = true; }
+                                // NEW: Spore Pine back to Pine
+                                else if(bId === "spore-pine"){ targetTile.setNet(Blocks.pine); changed = true; }
+
+                                if(changed){
+                                    Fx.pulverizeSmall.at(targetTile.worldx(), targetTile.worldy());
+                                    count++;
                                     break; 
                                 }
                             }

@@ -1,6 +1,6 @@
 type: GenericCrafter
 name: Plastanium Synthesizer
-description: Produces plastanium from oil and titanium. Requires water as coolant, and lubricant to operate.
+description: Produces plastanium from oil and titanium. Requires cryofluid as coolant, and lubricant to operate.
 size: 4
 hasItems: true
 hasLiquids: true
@@ -35,7 +35,7 @@ consumes: {
   // Use 'liquids' array to support multiple types
   liquids: [
     oil/0.8
-    water/0.6
+    cryofluid/0.6
     lubricant/0.4
   ]
 }

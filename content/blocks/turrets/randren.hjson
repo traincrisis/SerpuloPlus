@@ -3,7 +3,7 @@ name: Randren
 description: "Charges and fires a fragmenting energy star at air targets over extreme distances."
 size: 4
 range: 480 
-reload: 452.76 
+reload: 113.19
 shootSound: shootLancer
 
 # 1.5 second charge

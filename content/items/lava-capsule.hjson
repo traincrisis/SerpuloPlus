@@ -1,0 +1,8 @@
+name: Lava Capsule
+description: Used in storage of lava.
+color: d45525
+
+research: {
+  parent: liquid-capsule
+  planet: serpulo
+} 

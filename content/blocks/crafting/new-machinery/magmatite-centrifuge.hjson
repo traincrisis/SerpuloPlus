@@ -1,0 +1,41 @@
+type: GenericCrafter
+name: Magmatite Centrifuge
+description: Mixes lava and blast compound into magmatite, using coal as an additional heat source.
+size: 3
+itemCapacity: 20
+liquidCapacity: 60
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+// 1.5 seconds (90 frames / 60 FPS)
+craftTime: 60
+ambientSound: loopMachineSpin
+
+// i actually initially planned to have it be blast compound instead of pyra for the magmatite recipe but i forgot it and put pyratite, so here we are i changed it for both to blast
+
+consumes: {
+  // Set to 0.6666667 to achieve exactly 40 power units per second (40/60)
+  power: 2.66666666667
+  items: [
+    blast-compound/3
+    coal/2
+  ]
+  liquid: {
+    liquid: lava
+    amount: 0.5
+  }
+}
+
+outputItem: magmatite/5
+
+requirements: [
+  lead/255
+  metaglass/355
+  silicon/405
+  graphite/300
+  plastanium/205
+]
+
+category: crafting
+research: magmatite-mixer

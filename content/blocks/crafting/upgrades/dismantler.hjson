@@ -17,7 +17,7 @@ consumes: {
 }
 
 # Separators use 'craftTime' but define outputs in 'results'
-craftTime: 30
+craftTime: 8
 
 # Each entry represents the weight of the item being picked
 results: [

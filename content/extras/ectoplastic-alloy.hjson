@@ -1,0 +1,13 @@
+name: Ectoplastic Alloy
+description: Used in extremely fast transport structures and mining, but structurally weaker than cryogenic alloy.
+details: A spectral alloy created from mixing together cryogenic alloy and plastanium, dipping it in oil afterwards.
+color: d1ff5e
+charge: 0.25
+radioactivity: 0.1
+healthScaling: 0.25
+cost: 6.0
+
+research: {
+  parent: cryogenic-alloy
+  planet: serpulo
+} 

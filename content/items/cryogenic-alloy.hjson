@@ -1,9 +1,9 @@
 name: Cryogenic Alloy
-description: A frozen alloy created from mixing together neoplastic alloy, dipping it in cryofluid and glueing it together with graphite. Used in extremely fast transport structures and mining.
-color: 4a90ad
+description: Used in extremely fast transport structures and mining.
+details: Solidified cryofluid. A frozen alloy created from mixing together neoplastic alloy, dipping it in cryofluid and glueing it together with graphite.
+color: 79bad1
 charge: 0.5
 radioactivity: 0.2
-cost: 2
 healthScaling: 0.5
 cost: 4.0
 

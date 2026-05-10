@@ -1,0 +1,10 @@
+name: Magmatite
+description: Used in blast bombs and extremely explosive ammunition.
+color: d96948
+explosiveness: 1.8
+flammability: 0.2
+
+research: {
+  parent: blast-compound
+  planet: serpulo
+} 

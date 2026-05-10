@@ -1,6 +1,6 @@
 type: GenericCrafter
 name: Surge Crucible
-description: Fuses titanium, lead, silicon, and copper into surge alloy. Requires water as coolant.
+description: Fuses titanium, lead, silicon, and copper into surge alloy. Requires cryofluid as coolant.
 size: 4
 hasItems: true
 hasLiquids: true
@@ -39,7 +39,7 @@ consumes: {
     silicon/15
   ]
   liquids: [
-    water/0.4
+    cryofluid/0.4
   ]
 }
 

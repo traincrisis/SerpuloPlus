@@ -1,0 +1,70 @@
+type: Separator
+name: Atomizer
+description: Separates slag into trace amounts of exotic mineral components at low efficiency. Can produce phase fabric and surge alloy.
+size: 5
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 80
+liquidCapacity: 180
+
+consumes: {
+  power: 10
+  items: [
+    scrap/3
+    
+  ]
+  liquids: [
+    slag/0.3
+    cryofluid/0.1
+  ]
+}
+
+# Separators use 'craftTime' but define outputs in 'results'
+craftTime: 6
+
+# Each entry represents the weight of the item being picked
+results: [
+  thorium/30
+  plastanium/25
+  phase-fabric/20
+  surge-alloy/15
+  titanium/10
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: slag
+      padding: 3
+    }
+    {
+      type: DrawRegion
+      suffix: "-spinner"
+      spinSprite: true
+      # High-speed T3 rotation (doubled from vanilla)
+      rotateSpeed: 6.0
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  titanium/880
+  thorium/740
+  silicon/685
+  plastanium/350
+  phase-fabric/490
+  surge-alloy/845
+]
+
+category: crafting
+research: dismantler

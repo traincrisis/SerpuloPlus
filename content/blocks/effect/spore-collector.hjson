@@ -17,9 +17,8 @@ consumes: {
 outputItem: spore-pod/1
 
 requirements: [
-  lead/65
-  silicon/90
-  phase-fabric/100
+  lead/60
+  silicon/80
   titanium/70
 ]
 

@@ -1,0 +1,20 @@
+name: Quantofluid
+description: "Used as coolant in various advanced machines and turrets."
+
+// Mid-tone green
+color: b0faff
+
+// Highlight lime-green for the glow
+lightColor: ffffff
+
+// Darker green for UI bars/depth
+barColor: 78d6ff
+
+// Mechanical Statistics (Decimals)
+viscosity: 0.25
+heatCapacity: 1.6
+explosiveness: 0.0
+flammability: 0.0
+temperature: 0.12
+
+research: cryofluid

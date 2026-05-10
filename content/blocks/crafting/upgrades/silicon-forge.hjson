@@ -1,0 +1,61 @@
+type: AttributeCrafter
+name: Silicon Forge
+description: Refines silicon from sand and coal, using magmatite and lava as additional heat sources, and requires cryofluid as coolant. More efficient in hot locations.
+size: 5
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 80
+liquidCapacity: 120
+
+craftTime: 75
+
+// Visuals matched to your vanilla source snippet
+craftEffect: smeltsmoke
+ambientSound: loopSmelter
+
+attribute: heat
+boostScale: 0.15
+baseEfficiency: 1.0
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawFlame
+      flameColor: ffef99
+      flameRadius: 5.5
+      flameRadiusMag: 3.5
+    }
+  ]
+}
+
+consumes: {
+  power: 9.0
+  items: [
+    coal/12
+    sand/12
+    magmatite/4
+  ]
+  // Use 'liquids' array to support multiple types
+  liquids: [
+    lava/0.3
+    cryofluid/0.1
+  ]
+}
+
+outputItem: silicon/24
+
+requirements: [
+  metaglass/360
+  titanium/280
+  silicon/350
+  plastanium/95
+  phase-fabric/255
+]
+
+category: crafting
+research: mega-press

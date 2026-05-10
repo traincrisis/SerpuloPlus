@@ -1,6 +1,6 @@
 type: GenericCrafter
 name: Surge Refinery
-description: Fuses titanium, lead, silicon, and copper into surge alloy. Requires water as coolant, and pyratite as an additional heat source.
+description: Fuses titanium, lead, silicon, and copper into surge alloy. Requires quantofluid as coolant, and pyratite as an additional heat source.
 size: 5
 // 5x5 bc the vanilla surge smelter is 3x3 not 2x2
 hasItems: true
@@ -41,7 +41,7 @@ consumes: {
     pyratite/8
   ]
   liquids: [
-    water/0.8
+    quantofluid/0.8
   ]
 }
 

@@ -1,9 +1,10 @@
 type: GenericCrafter
 name: Lead Extractor
-description: "Extracts lead. Used in locations where lead ore is too far away or unavailable."
+description: "Extracts lead. Used in locations where lead ore is too far away or unavailable. Requires water as coolant."
 size: 2
 hasItems: true
 hasPower: true
+hasLiquids: true
 
 craftTime: 112
 craftEffect: smeltsmoke
@@ -29,6 +30,9 @@ drawer: {
 
 consumes: {
   power: 3.0
+  liquids: [
+    water/0.25
+  ]
 }
 
 outputItem: lead/1

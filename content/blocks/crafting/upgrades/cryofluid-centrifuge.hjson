@@ -13,7 +13,7 @@ craftTime: 60
 consumes: {
   power: 1.666667
   items: [
-    titanium/3
+    titanium/2
     graphite/1
   ]
   liquid: {

@@ -2,15 +2,16 @@ name: "serpuloplus"
 displayName: "[[]#a179fa]Serpulo[[]white]+"
 author: "[[]#984cd7]ThePul[[]#833edd]lerCell"
 subtitle: "Upgraded Tiers with extra steps"
-description: "An expansion of Serpulo, featuring a variety of new things:\n\n- New tiers for a variety of blocks, from [[]#9a9fb4]Scrap[[]white] to [[]#4a90ad]Cryogenic[[]white], existing for item distribution blocks, as Pneumatic Drill upgrades, and to the Power Node and Solar Panel with the large variant.\n\n- Upgrades for factory blocks from vanilla, including the Oven as an upgrade to the Kiln, Plastanium Infuser as an upgrade to the Plastanium Compressor, Phase Loom as an upgrade to the Phase Weaver, etc.\n\n- Expanded scrap processing lines: Specific Separators which separate slag down into specific items, and the Scrap Compactor which turns Graphite, Titanium and Thorium into Scrap.\n\n- And more! More stuff existing includes the Core: Apex with the Delta core unit, Spore Invader and Collector, and the Cell Incubator and Reactor.\n\nCredits:\n\n- [[]#ff]T[[]#b]w[[]#5]e[[]#2]u[[]white] (tinnphat_ on Discord), for spriting most old sprites in the mod, aswell as continuing Renn's work. \n\n- red.id9990 on Discord, for spriting most new sprites in the mod. \n\n- [[]#8cff00]Telesteel[[]white] (giga_chad96 on Discord) for Tesla turret sprite."
-version: "PR0.2"
-minGameVersion: "155"
+description: "A massive expansion of Serpulo, featuring a variety of new things:\n\n- New tiers for a variety of blocks, from [[]#9a9fb4]Scrap[[]white] to [[]#4a90ad]Cryogenic[[]white], existing for item distribution blocks, as Pneumatic Drill upgrades, and to the Power Node and Solar Panel with the large variant.\n\n- Upgrades for factory blocks from vanilla, including the Oven as an upgrade to the Kiln, Plastanium Infuser as an upgrade to the Plastanium Compressor, Phase Loom as an upgrade to the Phase Weaver, etc.\n\n- Expanded scrap processing lines: Specific Separators which separate slag down into specific items, and the Scrap Compactor which turns Graphite, Titanium and Thorium into Scrap.\n\n- And more! More stuff existing includes the Core: Apex with the Delta core unit, Spore Invader and Collector, and the Cell Incubator and Reactor.\n\nCredits:\n\n- [[]#ff]T[[]#b]w[[]#5]e[[]#2]u[[]white] (tinnphat_ on Discord), for spriting most old sprites in the mod, aswell as continuing Renn's work. \n\n- red.id9990 on Discord, for spriting most new sprites in the mod. \n\n- [[]#8cff00]Telesteel[[]white] (giga_chad96 on Discord) for Tesla turret sprite. \n\n [#ffffffff][navy]The [blue]V-[sky]Cell[white] (no account on Discord) for making idea for Rowhammer."
+version: "PR0.3"
+minGameVersion: "157"
 dependencies: [ ]
 hidden: false
 contentOrder: [
     neoplastic-alloy
     cryogenic-alloy
     ultimatter-alloy
+    magmatite
     liquid-capsule
     water-capsule
     slag-capsule
@@ -18,11 +19,52 @@ contentOrder: [
     cryofluid-capsule
     neoplasm-capsule
     lubricant-capsule
-    lubricant
+    lava-capsule
+    quantofluid-capsule
+    trio # needs implementation
+    quartet # needs implementation
+    dispel # needs implementation
+    spread # needs implementation
+    flamer # needs implementation
+    torch # needs implementation
+    shower # needs implementation
+    barrage # needs implementation
+    surf # needs implementation
+    influx # needs implementation
+    arch # needs implementation
+    vertex # needs implementation
+    conflux # needs implementation
+    gale # needs implementation
+    entropy # needs implementation
+    burst # needs implementation
+    punisher # needs implementation
+    part # needs implementation
+    fragment # needs implementation
+    cataclysm # needs implementation
+    deluge # needs implementation
+    flash # needs implementation
+    rupture # needs implementation
+    quake # needs implementation
+    tremor # needs implementation
+    hurricane # needs implementation
+    typhoon # needs implementation
+    predictor # needs implementation
+    judge # needs implementation
+    revenant # needs implementation
+    phantom # needs implementation
+    supernova # needs implementation
+    singularity # needs implementation
+    spark # needs implementation
     tesla
+    lightning # needs implementation
+    quartz # needs implementation
     vitreous
     randren
+    maul # needs implementation
+    pulse # needs implementation
     rowhammer
+    isotope # needs implementation
+    enricher # needs implementation
     stuxnet
     water-bore
     water-rig
@@ -42,6 +84,97 @@ contentOrder: [
     lead-rig
     titanium-rig
     thorium-rig
+    explosive-drill # needs implementation
+    mass-drill # needs implementation
+    scrap-drill # needs implementation
+    titanium-drill # needs implementation
+    armored-drill # needs implementation
+    thorium-drill # needs implementation
+    surge-drill # needs implementation
+    neoplastic-drill # needs implementation
+    cryogenic-drill # needs implementation
+    ultimatter-drill # needs implementation
+    blocked-conveyor # needs implementation
+    tunnel-conveyor # needs implementation
+    dispenser # needs implementation
+    scrap-conveyor # needs implementation
+    scrap-blocked-conveyor # needs implementation
+    scrap-junction # needs implementation
+    scrap-bridge-conveyor # needs implementation
+    scrap-tunnel-conveyor # needs implementation
+    scrap-router # needs implementation
+    scrap-distributor # needs implementation
+    scrap-dispenser # needs implementation
+    scrap-overflow-gate # needs implementation
+    scrap-underflow gate # needs implementation
+    titanium-blocked-conveyor # needs implementation
+    titanium-junction # needs implementation
+    titanium-bridge-conveyor # needs implementation
+    titanium-tunnel-conveyor # needs implementation
+    titanium-router # needs implementation
+    titanium-distributor # needs implementation
+    titanium-dispenser # needs implementation
+    titanium-overflow-gate # needs implementation
+    titanium-underflow-gate # needs implementation
+    armored-junction # needs implementation
+    armored-bridge-conveyor # needs implementation
+    armored-tunnel-conveyor # needs implementation
+    armored-router # needs implementation
+    armored-distributor # needs implementation
+    armored-dispenser # needs implementation
+    armored-overflow-gate # needs implementation
+    armored-underflow-gate # needs implementation
+    thorium-conveyor # needs implementation
+    thorium-blocked-conveyor # needs implementation
+    thorium-junction # needs implementation
+    thorium-bridge-conveyor # needs implementation
+    thorium-tunnel-conveyor # needs implementation
+    thorium-router # needs implementation
+    thorium-distributor # needs implementation
+    thorium-dispenser # needs implementation
+    thorium-overflow-gate # needs implementation
+    thorium-underflow-gate # needs implementation
+    kinetic-conveyor # needs implementation
+    surge-blocked-conveyor # needs implementation
+    surge-junction # needs implementation
+    surge-bridge-conveyor # needs implementation
+    surge-tunnel-conveyor # needs implementation
+    kinetic-router # needs implementation
+    surge-distributor # needs implementation
+    surge-dispenser # needs implementation
+    surge-overflow-gate # needs implementation
+    surge-underflow-gate # needs implementation
+    neoplastic-conveyor # needs implementation
+    neoplastic-blocked-conveyor # needs implementation
+    neoplastic-junction # needs implementation
+    neoplastic-bridge-conveyor # needs implementation
+    neoplastic-tunnel-conveyor # needs implementation
+    neoplastic-router # needs implementation
+    neoplastic-distributor # needs implementation
+    neoplastic-dispenser # needs implementation
+    neoplastic-overflow-gate # needs implementation
+    neoplastic-underflow-gate # needs implementation
+    cryogenic-conveyor # needs implementation
+    cryogenic-blocked-conveyor # needs implementation
+    cryogenic-junction # needs implementation
+    cryogenic-bridge-conveyor # needs implementation
+    cryogenic-tunnel-conveyor # needs implementation
+    cryogenic-router # needs implementation
+    cryogenic-distributor # needs implementation
+    cryogenic-dispenser # needs implementation
+    cryogenic-overflow-gate # needs implementation
+    cryogenic-underflow-gate # needs implementation
+    ultimatter-conveyor # needs implementation
+    ultimatter-blocked-conveyor # needs implementation
+    ultimatter-junction # needs implementation
+    ultimatter-bridge-conveyor # needs implementation
+    ultimatter-tunnel-conveyor # needs implementation
+    ultimatter-router # needs implementation
+    ultimatter-distributor # needs implementation
+    ultimatter-dispenser # needs implementation
+    ultimatter-overflow-gate # needs implementation
+    ultimatter-underflow-gate # needs implementation
+    ultimatter-warp-tube # needs implementation
     capsule-assembler
     water-encapsulator
     water-decapsulator
@@ -55,8 +188,41 @@ contentOrder: [
     neoplasm-decapsulator
     lubricant-encapsulator
     lubricant-decapsulator
+    lava-encapsulator
+    lava-decapsulator
+    quantofluid-encapsulator
+    quantofluid-decapsulator
     power-link
+    steam-direct-generator
     cell-reactor
+    titanium-power-node # needs implementation
+    large-titanium-power-node # needs implementation
+    titanium-solar-panel # needs implementation
+    large-titanium-solar-panel # needs implementation
+    armored-power-node # needs implementation
+    large-armored-power-node # needs implementation
+    armored-solar-panel # needs implementation
+    large-armored-solar-panel # needs implementation
+    thorium-power-node # needs implementation
+    large-thorium-power-node # needs implementation
+    thorium-solar-panel # needs implementation
+    large-thorium-solar-panel # needs implementation
+    surge-power-node # needs implementation
+    large-surge-power-node # needs implementation
+    surge-solar-panel # needs implementation
+    large-surge-solar-panel # needs implementation
+    neoplastic-power-node # needs implementation
+    large-neoplastic-power-node # needs implementation
+    neoplastic-solar-panel # needs implementation
+    large-neoplastic-solar-panel # needs implementation
+    cryogenic-power-node # needs implementation
+    large-cryogenic-power-node # needs implementation
+    cryogenic-solar-panel # needs implementation
+    large-cryogenic-solar-panel # needs implementation
+    ultimatter-power-node # needs implementation
+    large-ultimatter-power-node # needs implementation
+    ultimatter-solar-panel # needs implementation
+    large-ultimatter-solar-panel # needs implementation
     scrap-melder
     copper-separator
     lead-separator
@@ -64,7 +230,7 @@ contentOrder: [
     titanium-separator
     heavy-incinerator
     cell-incubator
-    cell-grower
+    cell-synthesizer
     cell-plant
     neoplastic-smelter
     neoplastic-crucible
@@ -72,14 +238,25 @@ contentOrder: [
     cryogenic-freezer
     cryogenic-chiller
     cryogenic-condenser
-    ultimatter-accelerator # needs implementation
-    ultimatter-collider # needs implementation
-    ultimatter-singularity # needs implementation
+    ultimatter-accelerator
+    ultimatter-collider
+    ultimatter-singularity
     lubricant-mixer
-    lubricant-centrifuge # needs implementation
-    lubricant-compounder # needs implementation
+    lubricant-centrifuge
+    lubricant-compounder
+    lava-smelter
+    lava-crucible
+    lava-refinery
+    magmatite-mixer
+    magmatite-centrifuge
+    magmatite-compounder
+    quantofluid-mixer
+    quantofluid-centrifuge
+    quantofluid-compounder
     graphite-compactor
+    mega-press
     silicon-refinery
+    silicon-forge
     oven
     furnace
     plastanium-infuser
@@ -96,21 +273,24 @@ contentOrder: [
     blast-compounder
     burner
     vaporizer
+    dismantler
+    atomizer
     spore-crusher
     spore-compactor
     grinder
     crusher
-    dismantler
     coal-solidifier
     coal-compressor
     blast-direct-mixer
     blast-direct-centrifuge
     blast-direct-compounder
+    steam-boiler
+    large-payload-conveyor
+    large-payload-router
     pentative-reconstructor # needs implementation
     hexative-reconstructor # needs implementation
     core-scout
     core-apex
-    core-monument
     safe
     center
     bank
@@ -119,8 +299,10 @@ contentOrder: [
     spore-invader
     spore-collector
     neoplastic-processor
-    cryogenic-processor # needs implementation
-    ultimatter-processor # needs implementation
+    cryogenic-processor
+    ultimatter-processor
+    lubricant
+    steam
     monarch # needs implementation, t6 dagger
     emperor # needs implementation, t7 dagger
     aurora # needs implementation, t6 nova
@@ -137,6 +319,14 @@ contentOrder: [
     triton # needs implementation, t7 retusa
     delta
     forsaken-spirit
-    forgotten-spirit # needs implementation
+    forgotten-demon # needs implementation
     zeus # needs implementation
+    lubricant
+    steam
+    lava
+    quantofluid
+    abandonedWastes # needs implementation
+    cellFacility # needs implementation
+    divineJungle # needs implementation
+    ballisticComplex # needs implementation
 ]

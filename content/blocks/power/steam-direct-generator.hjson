@@ -1,0 +1,61 @@
+type: ConsumeGenerator
+name: Steam Direct Generator
+description: "Generates power directly from steam."
+size: 2
+hasPower: true
+hasItems: false
+hasLiquids: true
+
+// Power output is slightly higher than vanilla (5.5) to account for the processing step
+powerProduction: 8.0
+
+// Build cost
+requirements: [
+  copper/50
+  graphite/40
+  lead/40
+  silicon/30
+]
+
+consumes: {
+  liquid: {
+    liquid: steam
+    amount: 0.1
+  }
+}
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawWarmupRegion
+    }
+    {
+      type: DrawRegion
+      suffix: "-turbine"
+      rotateSpeed: 4
+    }
+    {
+      type: DrawRegion
+      suffix: "-turbine"
+      rotateSpeed: -4
+      rotation: 45
+    }
+    {
+      type: DrawRegion
+      suffix: "-cap"
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: steam
+    }
+  ]
+}
+
+ambientSound: loopSteam
+
+category: power
+research: steam-boiler 

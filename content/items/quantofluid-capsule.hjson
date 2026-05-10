@@ -1,0 +1,10 @@
+name: Quantofluid Capsule
+description: Used in storage of quantofluid.
+color: b0faff
+explosiveness: 0.0
+flammability: 0.0
+
+research: {
+  parent: liquid-capsule
+  planet: serpulo
+} 

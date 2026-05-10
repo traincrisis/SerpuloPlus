@@ -1,0 +1,37 @@
+type: GenericCrafter
+name: Magmatite Mixer
+description: Mixes lava and blast compound into magmatite.
+size: 2
+itemCapacity: 10
+liquidCapacity: 30
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+// 1.5 seconds (90 frames / 60 FPS)
+craftTime: 30 
+ambientSound: loopMachineSpin
+
+consumes: {
+  // Set to 0.6666667 to achieve exactly 40 power units per second (40/60)
+  power: 1
+  items: [
+    blast-compound/2
+  ]
+  liquid: {
+    liquid: lava
+    amount: 0.25
+  }
+}
+
+outputItem: magmatite/2
+
+requirements: [
+  lead/55
+  metaglass/105
+  silicon/255
+  graphite/205
+]
+
+category: crafting
+research: blast-mixer 

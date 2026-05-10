@@ -1,6 +1,6 @@
 type: AttributeCrafter
 name: Bio-Chamber
-description: "Cultivates tiny concentrations of atmospheric spores into spore pods. Requires coal for better incubation, and slag for thermal stimulation."
+description: "Cultivates tiny concentrations of atmospheric spores into spore pods. Requires coal for better incubation, and lava for thermal stimulation."
 size: 4
 hasItems: true
 hasLiquids: true
@@ -56,7 +56,7 @@ consumes: {
   # 24/sec total consumption
   liquids: [
     water/0.8
-    slag/0.2
+    lava/0.2
   ]
 }
 

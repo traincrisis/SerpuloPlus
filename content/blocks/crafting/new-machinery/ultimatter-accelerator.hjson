@@ -1,0 +1,63 @@
+type: GenericCrafter
+name: Ultimatter Accelerator
+description: "Accelerates nanoparticles of cryogenic alloys to transform it into its anomalous form."
+size: 3
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 20
+
+# High intensity, so it uses a fair bit of power for a 3x3
+consumes: {
+  power: 7
+  items: [
+    cryogenic-alloy/2
+    graphite/3
+  ]
+  liquids: [
+    cryofluid/0.26666666666
+    lubricant/0.13333333333
+  ]
+}
+
+# Focused acceleration - faster than the T3 byproduct chance
+craftTime: 120
+outputItem: ultimatter-alloy/1
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    # 1. Base layer (Always visible)
+    {
+      type: DrawDefault
+    }
+    # 2. Top Sprite - ONLY visible when active
+    {
+      type: DrawWarmupRegion
+    }
+    # 3. The "Surge Circle" - Rendered on the very top
+    {
+      type: DrawFlame
+      # Inner color (Alloy glow)
+      flameColor: f3d4ff
+      # Border color you requested
+    }
+  ]
+}
+
+craftEffect: smeltsmoke
+ambientSound: loopSmelter
+
+requirements: [
+  metaglass/365
+  plastanium/630
+  cryogenic-alloy/445
+  ultimatter-alloy/655
+  phase-fabric/855
+  surge-alloy/565
+  silicon/445
+  graphite/355
+]
+
+category: crafting
+research: cryogenic-condenser

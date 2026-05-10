@@ -1,6 +1,6 @@
 type: GenericCrafter
 name: Graphite Compactor
-description: Compresses coal into graphite. Requires water as coolant and sand as stabilizer.
+description: Compresses coal into graphite. Requires cryofluid as coolant and sand as stabilizer.
 size: 4
 itemCapacity: 20
 liquidCapacity: 40
@@ -14,13 +14,13 @@ craftEffect: pulverizeMedium
 
 consumes: {
   // Set to 0.6666667 to achieve exactly 40 power units per second (40/60)
-  power: 0.6666667
+  power: 4
   items: [
     coal/8
     sand/1
   ]
   liquids: [
-    water/0.05
+    cryofluid/0.1
   ]
 }
 

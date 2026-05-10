@@ -1,0 +1,62 @@
+type: GenericCrafter
+name: Quantofluid Centrifuge
+description: Mixes cryofluid and phase fabric to produce quantofluid. Requires silicon as a chemical stabilizer.
+size: 3
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 20
+liquidCapacity: 60
+
+craftTime: 60
+
+consumes: {
+  power: 4.33333333333
+  items: [
+    phase-fabric/2
+    silicon/2
+  ]
+  liquid: {
+    liquid: cryofluid
+    amount: 0.4
+  }
+}
+
+outputLiquid: quantofluid/0.75
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    // 1. The very base of the machine
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    // 2. The liquids (rendered on top of -bottom but under the main sprite)
+    {
+      type: DrawLiquidTile
+      drawLiquid: cryofluid
+      padding: 2
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: quantofluid
+      padding: 2
+    }
+    // 3. The main machine sprite (over the liquid)
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  metaglass/465
+  titanium/555
+  phase-fabric/345
+  silicon/225
+  graphite/405
+]
+
+category: crafting
+research: quantofluid-mixer

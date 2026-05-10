@@ -13,8 +13,8 @@ craftTime: 60
 consumes: {
   power: 7
   items: [
-    titanium/4
-    silicon/5
+    titanium/3
+    silicon/2
   ]
   liquid: {
     liquid: water
@@ -22,7 +22,7 @@ consumes: {
   }
 }
 
-outputLiquid: cryofluid/1
+outputLiquid: cryofluid/1.41666666667
 
 drawer: {
   type: DrawMulti

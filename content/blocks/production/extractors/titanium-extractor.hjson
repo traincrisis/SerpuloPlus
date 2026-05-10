@@ -1,9 +1,10 @@
 type: GenericCrafter
 name: Titanium Extractor
-description: "Extracts titanium. Used in locations where titanium ore is too far away or unavailable."
+description: "Extracts titanium. Used in locations where titanium ore is too far away or unavailable. Requires water as coolant."
 size: 2
 hasItems: true
 hasPower: true
+hasLiquids: true
 
 craftTime: 112
 craftEffect: smeltsmoke
@@ -29,6 +30,9 @@ drawer: {
 
 consumes: {
   power: 3.0
+  liquids: [
+    water/0.25
+  ]
 }
 
 outputItem: titanium/1

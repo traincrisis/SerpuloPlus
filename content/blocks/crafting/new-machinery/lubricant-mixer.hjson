@@ -2,7 +2,6 @@ type: GenericCrafter
 name: Lubricant Mixer
 description: Mixes oil and graphite to produce lubricant.
 size: 2
-health: 160
 hasItems: true
 hasLiquids: true
 hasPower: true

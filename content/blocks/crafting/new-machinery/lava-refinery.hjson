@@ -1,0 +1,64 @@
+type: GenericCrafter
+name: Lava Refinery
+description: Concentrates slag and blast compound to produce lava. Requires titanium as reinforcement.
+size: 4
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 40
+liquidCapacity: 90
+
+craftTime: 75
+
+consumes: {
+  power: 4.66666666667
+  items: [
+    blast-compound/3
+    titanium/2
+  ]
+  liquid: {
+    liquid: slag
+    amount: 1
+  }
+}
+
+outputLiquid: lava/1.5
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    // 1. The very base of the machine
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    // 2. The liquids (rendered on top of -bottom but under the main sprite)
+    {
+      type: DrawLiquidTile
+      drawLiquid: slag
+      padding: 2
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: lava
+      padding: 2
+    }
+    // 3. The main machine sprite (over the liquid)
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+requirements: [
+  phase-fabric/605
+  silicon/405
+  plastanium/355
+  lead/945
+  metaglass/650
+  surge-alloy/855
+  thorium/255
+]
+
+category: crafting
+research: lava-crucible

@@ -1,5 +1,5 @@
 type: GenericCrafter
-name: Cell Grower
+name: Cell Synthesizer
 description: "Incubates neoplastic cells from phase and injects into water to produce neoplasm. Requires thorium as additional injection."
 size: 3
 liquidCapacity: 120
