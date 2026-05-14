@@ -21,7 +21,7 @@ consumes: {
   }
 }
 
-outputLiquid: quantofluid/0.25
+outputLiquid: quantofluid/0.08333333333
 
 drawer: {
   type: DrawMulti

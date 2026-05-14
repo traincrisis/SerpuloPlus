@@ -1,6 +1,6 @@
 # The internal ID is taken from the filename: divineJungle.hjson
 localizedName: Divine Jungle
-description: "This mysterious jungle on the outskirts of the Salt Flats is known for disappearances of cores that landed here. Plentiful resources, but significant enemy presence has been detected here. Scans detect a divine entity and a demon native to this region. Obtain the advanced unit technology of the enemy. Utilize units capable of traversing walls."
+description: "This mysterious jungle on the outskirts of the Salt Flats is known for disappearances of cores that landed here.\n\nPlentiful resources, but significant enemy presence has been detected here. Scans detect a divine entity and a demon native to this region.\n\nObtain the advanced unit technology of the enemy. Utilize units capable of traversing walls."
 
 sector: 37
 planet: serpulo
@@ -21,10 +21,6 @@ research: {
     {
       type: Research
       content: toxopid
-    }
-    {
-      type: Research
-      content: cryogenic-condenser
     }
   ]
 }

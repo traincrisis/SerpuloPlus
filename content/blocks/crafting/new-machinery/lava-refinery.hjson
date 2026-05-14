@@ -47,8 +47,14 @@ drawer: {
     {
       type: DrawDefault
     }
+    {
+      type: DrawFlame
+      flameColor: ffc999
+    }
   ]
 }
+
+ambientSound: loopSmelter
 
 requirements: [
   phase-fabric/605

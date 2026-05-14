@@ -1,6 +1,7 @@
 type: Fracker
 name: Oil Rig
 description: "Uses large amounts of power, lead and graphite to drill for oil."
+details: "America wanted 250 units of these for a $100k reward for Sharded, but Sharded insists on keeping it only for themselves."
 size: 5
 liquidCapacity: 120
 

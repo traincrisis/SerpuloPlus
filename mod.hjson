@@ -1,7 +1,7 @@
 name: "serpuloplus"
 displayName: "[[]#a179fa]Serpulo[[]white]+"
 author: "[[]#984cd7]ThePul[[]#833edd]lerCell"
-subtitle: "Upgraded Tiers with extra steps"
+subtitle: "Why is Serpulo Minus better?"
 description: "A massive expansion of Serpulo, featuring a variety of new things:\n\n- New tiers for a variety of blocks, from [[]#9a9fb4]Scrap[[]white] to [[]#4a90ad]Cryogenic[[]white], existing for item distribution blocks, as Pneumatic Drill upgrades, and to the Power Node and Solar Panel with the large variant.\n\n- Upgrades for factory blocks from vanilla, including the Oven as an upgrade to the Kiln, Plastanium Infuser as an upgrade to the Plastanium Compressor, Phase Loom as an upgrade to the Phase Weaver, etc.\n\n- Expanded scrap processing lines: Specific Separators which separate slag down into specific items, and the Scrap Compactor which turns Graphite, Titanium and Thorium into Scrap.\n\n- And more! More stuff existing includes the Core: Apex with the Delta core unit, Spore Invader and Collector, and the Cell Incubator and Reactor.\n\nCredits:\n\n- [[]#ff]T[[]#b]w[[]#5]e[[]#2]u[[]white] (tinnphat_ on Discord), for spriting most old sprites in the mod, aswell as continuing Renn's work. \n\n- red.id9990 on Discord, for spriting most new sprites in the mod. \n\n- [[]#8cff00]Telesteel[[]white] (giga_chad96 on Discord) for Tesla turret sprite. \n\n [#ffffffff][navy]The [blue]V-[sky]Cell[white] (no account on Discord) for making idea for Rowhammer."
 version: "PR0.3"
 minGameVersion: "157"
@@ -301,20 +301,18 @@ contentOrder: [
     neoplastic-processor
     cryogenic-processor
     ultimatter-processor
-    lubricant
-    steam
     monarch # needs implementation, t6 dagger
     emperor # needs implementation, t7 dagger
-    aurora # needs implementation, t6 nova
-    magnetar # needs implementation, t7 nova
-    chelicerae # needs implementation, t6 crawler
-    arachne # needs implementation, t7 crawler
-    solstice # needs implementation, t6 flare
-    equinox # needs implementation, t7 flare
-    ennea # needs implementation, t6 mono
-    deca # needs implementation, t7 mono
-    cetus # needs implementation, t6 risso
-    leviathan # needs implementation, t7 risso
+    fornax # needs implementation, t6 nova
+    draco # needs implementation, t7 nova
+    sicariid # needs implementation, t6 crawler
+    goliath # needs implementation, t7 crawler
+    corona # needs implementation, t6 flare
+    syzygy # needs implementation, t7 flare
+    icosi # needs implementation, t6 mono
+    hecato # needs implementation, t7 mono
+    arnoux # needs implementation, t6 risso
+    eden # needs implementation, t7 risso
     glaucus # needs implementation, t6 retusa
     triton # needs implementation, t7 retusa
     delta

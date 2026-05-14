@@ -1,7 +1,8 @@
 type: LaserTurret
 name: Stuxnet
-description: "Fires a colossal catastrophic beam at enemy targets over long distances."
+description: "Fires a colossal catastrophic beam at enemy targets over long distances. Requires advanced non-water coolant to operate efficiently."
 size: 5
+liquidCapacity: 160
 
 # BALANCED: 60 tiles (480 units)
 range: 480 
@@ -104,6 +105,9 @@ shootType: {
 
 consumes: {
   power: 100.0
+  coolant: {
+    amount: 0.5
+  }
 }
 
 requirements: [

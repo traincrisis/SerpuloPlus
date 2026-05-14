@@ -15,7 +15,7 @@ Events.run(Trigger.draw, () => {
     
     if (player != null) {
         Groups.unit.each(u => {
-            if (u.team != player.team && u.type.name.includes("forsaken-spirit")) {
+            if (u.team != player.team && u.type.name.includes("forbidden-demon")) {
                 let dst = u.dst(player);
                 if (dst < 500) {
                     let intensity = 1 - (dst / 500);
@@ -47,7 +47,7 @@ Events.run(Trigger.update, () => {
 
     let foundSpirit = false;
     Groups.unit.each(u => {
-        if (u.team != player.team && u.type.name.includes("forsaken-spirit")) {
+        if (u.team != player.team && u.type.name.includes("forbidden-demon")) {
             foundSpirit = true;
             let dst = u.dst(player);
             

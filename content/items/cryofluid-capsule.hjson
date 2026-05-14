@@ -3,6 +3,6 @@ description: Used in storage of cryofluid.
 color: 6ecdec
 
 research: {
-  parent: oil-capsule
+  parent: liquid-capsule
   planet: serpulo
 } 

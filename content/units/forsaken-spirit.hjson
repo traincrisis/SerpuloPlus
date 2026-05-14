@@ -9,7 +9,6 @@ hitSize: 72
 flying: true
 lowAltitude: true
 hidden: true
-killable: false
 
 engines: [
   // Left Thruster

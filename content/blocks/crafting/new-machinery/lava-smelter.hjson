@@ -46,8 +46,16 @@ drawer: {
     {
       type: DrawDefault
     }
+    {
+      type: DrawFlame
+      # Inner color (Alloy glow)
+      flameColor: ffc999
+      # Border color you requested
+    }
   ]
 }
+
+ambientSound: loopSmelter
 
 requirements: [
   phase-fabric/255

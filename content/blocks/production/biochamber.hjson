@@ -1,6 +1,7 @@
 type: AttributeCrafter
 name: Bio-Chamber
 description: "Cultivates tiny concentrations of atmospheric spores into spore pods. Requires coal for better incubation, and lava for thermal stimulation."
+details: "The most efficient way of making spores theoretically possible has been discovered, requiring to be on spores for better efficiency and lava-based thermal stimulation along with coal for even more oil."
 size: 4
 hasItems: true
 hasLiquids: true
@@ -10,6 +11,7 @@ hasPower: true
 craftTime: 120
 itemCapacity: 40
 liquidCapacity: 190
+baseEfficiency: 0.25
 
 # Spore logic
 attribute: spores

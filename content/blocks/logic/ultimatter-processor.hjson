@@ -10,7 +10,6 @@ range: 1000
 
 consumes: {
   liquids: [
-    cryofluid/0.33333333333
     quantofluid/0.25
   ]
 }
